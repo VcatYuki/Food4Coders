@@ -59,14 +59,24 @@
 
 /* Mobile */
 @media only screen and (max-width:600px ) {
-<<<<<<< HEAD
 
-
-
-
-
-
-=======
-    
->>>>>>> 021925b55030cb08e8eaf8aa329479a272581157
 }
+
+.serving {
+    display: flex;
+    flex-direction: column;
+    background-color: blue;
+    }
+
+.h2 {
+    display: flex;
+    justify-content: center;
+    }
+
+.sleft {
+    display: flex;
+    flex-direction: row;
+    }
+
+
+
