@@ -10,7 +10,7 @@ let pizzaList = [
     {
         name:"pizza01",
         description:"Pizza con champiñones, frankfurt, aceitunas negras y pimiento verde y rojo",
-        img:"/Food4Coders/assets/img/pizzas/pizza1.png",
+        img:"/assets/img/pizzas/pizza1.png",
         id:0,
         quantity: 0,
         price: 8 /* [
@@ -22,7 +22,7 @@ let pizzaList = [
     {
         name:"pizza02",
         description:"Pizza con jamón y pimiento",
-        img:"/Food4Coders/assets/img/pizzas/pizza2.png",
+        img:"/assets/img/pizzas/pizza2.png",
         id:1,
         quantity: 0,
         price: 8 /* [
@@ -34,7 +34,7 @@ let pizzaList = [
     {
         name:"pizza03",
         description:"Pizza de verduras y aceitunas negras",
-        img:"/Food4Coders/assets/img/pizzas/pizza3.png",
+        img:"/assets/img/pizzas/pizza3.png",
         id:2,
         quantity: 0,
         price: 8 /* [
@@ -54,7 +54,7 @@ function showMenu() {
                 <p class="price">€${pizzaList[i].price}</p>
                 <h4>${pizzaList[i].name}</h4>
                 <p>${pizzaList[i].description}</p>
-                <div class="seving">
+                <div class="serving">
                     <h2>SERVING</h2>
                         <button class "sleft" onClick="reduce(this)">-</button>
                         <div class="quantity">${pizzaList[i].quantity}</div>

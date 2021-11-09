@@ -79,12 +79,12 @@ body{
 .serving {
     display: flex;
     flex-direction: column;
-    background-color: blue;
     }
 
-.h2 {
+h2 {
     display: flex;
     justify-content: center;
+    border: 1px solid black;
     }
 
 .sleft {
