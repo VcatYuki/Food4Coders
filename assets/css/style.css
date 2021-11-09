@@ -2,9 +2,11 @@
     font-family: 'open sans';
 }
 
+/* .seving {
+    background-color: blue;
+} */
 /* Tablet */
 @media only screen and (max-width:1280px ) {
-
 
 }
 
@@ -70,3 +72,24 @@
         width: 10px;
     }
 }
+
+.serving {
+    display: flex;
+    flex-direction: column;
+    }
+
+h2 {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    }
+
+.sleft {
+    display: flex;
+    flex-direction: row;
+    }
+
+
+
+
+
