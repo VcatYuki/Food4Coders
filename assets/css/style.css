@@ -1,72 +1,75 @@
-
-
-.navbar img{
-    width: 42px;
-    height: 43px;
-}
-
-.cart{
-    width: 48px;
-    height: 41px;
-}
-
-.logo-name{
-    font-size: 16px;
-    letter-spacing: 0.2em;
-}
-.bmenu {
-    width: 100%;
-    top: 10px;
-    left: 87%;    
-    z-index: 2; 
-} 
-
-.menu {   
-    width: 46px;
-    height: 46px;
-    border: none;
-    border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: flex-end;
-    padding-right: 10px;
-}
-
-.line {
-    width: 15px;
-    height: 2px;
-    margin: 2px;
-    display: flex;    
-    background-color: black;
-}
-.line:nth-child(2) {
-    width: 20px;
-}
-.line:nth-child(3) {
-    width: 10px;
+body{
+    font-family: 'open sans';
 }
 
 /* Tablet */
 @media only screen and (max-width:1280px ) {
-
-    
-    
-    
 
 
 }
 
 /* Mobile */
 @media only screen and (max-width:600px ) {
-<<<<<<< HEAD
+    .navbar{
+        display:flex;
+        justify-content:flex-end;
+        
+    }
 
+    .navbar-logo{
+        display:flex;
+        padding-right:15%;
+    }
 
-
-
-
-
-=======
+    .navbar-cart-bmenu{
+        display:flex;
+        justify-content: space-around;
+       
+    }
     
->>>>>>> 021925b55030cb08e8eaf8aa329479a272581157
+    .navbar img{
+        width: 35px;
+        height: 35px;
+    }
+    
+    .logo-name{
+        font-size: 16px;
+        letter-spacing: 0.1em;
+        line-height: 35px;
+
+    }
+    
+    /*burger-menu*/ 
+    .bmenu {
+        width: 100%;
+        top: 10px;
+        left: 87%;    
+        z-index: 2; 
+    } 
+    
+    .menu {   
+        width: 46px;
+        height: 46px;
+        border: none;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-right: 10px;
+    }
+    
+    .line {
+        width: 15px;
+        height: 2px;
+        margin: 2px;
+        display: flex;    
+        background-color: black;
+    }
+    .line:nth-child(2) {
+        width: 20px;
+    }
+    .line:nth-child(3) {
+        width: 10px;
+    }
 }
