@@ -1,9 +1,29 @@
+.navbar img{
+    width: 42px;
+    height: 43px;
+}
+
+.cart{
+    width: 48px;
+    height: 41px;
+}
+
 /* Tablet */
 @media only screen and (max-width:1280px ) {
+
     
+    
+    
+
+
 }
 
 /* Mobile */
 @media only screen and (max-width:600px ) {
+
+
+
+
+
 
 }

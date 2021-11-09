@@ -2,7 +2,7 @@ let pizzaList = [
     {
         name:"pizza01",
         description:"Pizza con champiñones, frankfurt, aceitunas negras y pimiento verde y rojo",
-        img:"/Food4Coders/assets/img/pizza1.png",
+        img:"/Food4Coders/assets/img/pizzas/pizza1.png",
         id:0,
         quantity: 0,
         price: 8,
