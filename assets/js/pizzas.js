@@ -1,9 +1,41 @@
+let sizeList = {
+    small:8,
+    medium:10,
+    large:12
+}            
+
+
+
 let pizzaList = [
     {
         name:"pizza01",
         description:"Pizza con champiñones, frankfurt, aceitunas negras y pimiento verde y rojo",
         img:"/Food4Coders/assets/img/pizzas/pizza1.png",
         id:0,
+        quantity: 0,
+        price: 8 /* [
+            small:8,
+            medium:10,
+            large:12
+        ] */,
+    },
+    {
+        name:"pizza02",
+        description:"Pizza con jamón y pimiento",
+        img:"/Food4Coders/assets/img/pizzas/pizza2.png",
+        id:1,
+        quantity: 0,
+        price: 8 /* [
+            small:8,
+            medium:10,
+            large:12
+        ] */,
+    },
+    {
+        name:"pizza03",
+        description:"Pizza de verduras y aceitunas negras",
+        img:"/Food4Coders/assets/img/pizzas/pizza3.png",
+        id:2,
         quantity: 0,
         price: 8 /* [
             small:8,
