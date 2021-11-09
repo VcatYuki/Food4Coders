@@ -47,26 +47,16 @@
     width: 10px;
 }
 
+/* .seving {
+    background-color: blue;
+} */
 /* Tablet */
 @media only screen and (max-width:1280px ) {
-
-    
-    
-    
-
 
 }
 
 /* Mobile */
 @media only screen and (max-width:600px ) {
-<<<<<<< HEAD
 
-
-
-
-
-
-=======
-    
->>>>>>> 021925b55030cb08e8eaf8aa329479a272581157
 }
+
