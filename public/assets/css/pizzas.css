@@ -1,3 +1,4 @@
+/*Mobile Version*/
 @media only screen and (max-width:600px ) {
     .serving {
         display: flex;
@@ -17,6 +18,25 @@
         align-items: baseline;
         gap: 20px;
     }
+
+    .sizes {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: baseline;
+        gap: 20px;
+    }
+
+
 }
 
 
+<<<<<<< HEAD
+}
+
+/* Tablet */
+@media only screen and (min-width: 768px) {
+
+}
+=======
+>>>>>>> 2dfe4dfe5bf2c48f2d8e9cbd56f050638ed7df0d
