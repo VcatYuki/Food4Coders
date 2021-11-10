@@ -56,9 +56,9 @@ function showMenu() {
                 <p>${pizzaList[i].description}</p>
                 <div class="serving">
                     <h2>SERVING</h2>
-                        <button class "sleft" onClick="reduce(this)">-</button>
+                        <button class="sleft" onClick="reduce(this)">-</button>
                         <div class="quantity">${pizzaList[i].quantity}</div>
-                        <button class "rleft" onClick="augmentar(this)">+</button>
+                        <button class="rleft" onClick="augmentar(this)">+</button>
                 </div>
                 <button class="addCart"><img class="cart" src="" alt="Shopping Cart">Add to Box</button>
             </div>
