@@ -1,0 +1,64 @@
+/* Mobile */
+@media only screen and (max-width:600px ) {
+    .navbar{
+        display:flex;
+        justify-content: space-around;
+        
+    }
+
+    .navbar-logo{
+        display:flex;
+        
+    }
+
+    .navbar-cart-bmenu{
+        display:flex;
+    }
+    
+    .navbar img{
+        width: 35px;
+        height: 35px;
+    }
+    
+    .logo-name{
+        font-size: 16px;
+        letter-spacing: 0.1em;
+        line-height: 35px;
+
+    }
+    
+    /*burger-menu*/ 
+    .bmenu {
+        width: 100%;
+        top: 10px;
+        left: 87%;    
+        z-index: 2; 
+    } 
+    
+    .menu {   
+        width: 46px;
+        height: 46px;
+        border: none;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-right: 10px;
+        background-color: red;
+    }
+    
+    .line {
+        width: 15px;
+        height: 2px;
+        margin: 2px;
+        display: flex;    
+        background-color: black;
+    }
+    .line:nth-child(2) {
+        width: 20px;
+    }
+    .line:nth-child(3) {
+        width: 10px;
+    }
+}

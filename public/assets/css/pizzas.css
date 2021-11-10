@@ -1,0 +1,19 @@
+@media only screen and (max-width:600px ) {
+
+.serving {
+    display: flex;
+    flex-direction: column;
+    }
+
+h2 {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    }
+
+.sleft {
+    display: flex;
+    flex-direction: row;
+    }
+
+}
