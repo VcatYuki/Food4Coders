@@ -77,7 +77,15 @@
 
 /* Mobile */
 @media only screen and (max-width:600px ) {
+    .navbar{
+        justify-content: center;
+    }
 
+    .navbar-cart-bmenu{
+        position:absolute;
+        right:0;
+        flex-direction: column-reverse;
+    }
    
 }
     
