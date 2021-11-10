@@ -17,6 +17,16 @@
         align-items: baseline;
         gap: 20px;
     }
+
+    .sizes {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: baseline;
+        gap: 20px;
+    }
+
+
 }
 
 

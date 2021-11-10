@@ -1,7 +1,7 @@
 /* .bserving buttons*/
 
 @media only screen and (max-width:600px ) {
-    
+
     .sleft {
         display: block;
         width: 28px;
@@ -19,4 +19,37 @@
         border: 2px solid grey;
         background-color: transparent;
         }
+/* .sizes buttons*/
+
+    .small {
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid grey;
+        background-color: transparent;
+        }
+
+    .medium {
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid grey;
+        background-color: transparent;
+        }
+
+    .large {
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid grey;
+        background-color: transparent;
+        }
+
     }
+
+
+
+
