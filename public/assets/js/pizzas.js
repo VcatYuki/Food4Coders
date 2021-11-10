@@ -48,7 +48,8 @@ let pizzaList = [
 function showMenu() {
     let plates ="";
     for (let i = 0; i < pizzaList.length; i++) {
-        plates += `<div data-number="${pizzaList[i].id}">
+        plates += 
+        `<div data-number="${pizzaList[i].id}">
             <img src="${pizzaList[i].img}">
             <div class="info">
                 <p class="price">€${pizzaList[i].price.small}</p>
@@ -56,9 +57,11 @@ function showMenu() {
                 <p>${pizzaList[i].description}</p>
                 <div class="serving">
                     <h2>SERVING</h2>
+                    <div class="bserving">
                         <button class="sleft" onClick="reduce(this)">-</button>
                         <div class="quantity">${pizzaList[i].quantity}</div>
                         <button class="rleft" onClick="augmentar(this)">+</button>
+                    </div>
                 </div>
                 <button class="addCart"><img class="cart" src="" alt="Shopping Cart">Add to Box</button>
             </div>
