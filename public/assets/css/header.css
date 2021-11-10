@@ -1,79 +1,111 @@
+/*Applies to all screen sizes*/
+.navbar{
+    display:flex;
+    justify-content: space-between;
+}
+
+.navbar-logo{
+    display:flex;
+
+}
+
+.navbar-cart-bmenu{
+    display:flex;
+}
+
+.logo{
+    width: 35px;
+    height: 35px;
+
+    padding:15px;
+}
+
+.cart{
+    width: 30px;
+    height: 30px;
+
+    padding:16px;
+}
+
+.logo-name{
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    line-height: 35px;
+
+    padding:15px;
+    padding-left: 2px;
+
+}
+
+/*burger-menu*/ 
+.bmenu {
+    width: 100%;
+    top: 10px;
+    left: 87%;    
+    z-index: 2; 
+
+    padding:15px;
+} 
+
+.menu {   
+    width: 46px;
+    height: 46px;
+    border: none;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 10px;
+    
+}
+
+.line {
+    width: 15px;
+    height: 2px;
+    margin: 2px;
+    display: flex;    
+    background-color: black;
+}
+.line:nth-child(2) {
+    width: 20px;
+}
+.line:nth-child(3) {
+    width: 10px;
+}
+
+
 /* Mobile */
 @media only screen and (max-width:600px ) {
-    .navbar{
-        display:flex;
-        justify-content: space-between;
-        
-        
-    }
 
-    .navbar-logo{
-        display:flex;
-        padding:5%;
-        
-    }
-
-    .navbar-cart-bmenu{
-        display:flex;
-        padding:5%;
-        
+   
+}
+    
+/* Tablet */
+@media only screen and (min-width: 768px){
+   
+    header{
+        padding:20px;
     }
 
     .logo{
-        width: 35px;
-        height: 35px;
+        width: 45px;
+        height: 45px;
+
     }
 
-    .cart{
-        width: 30px;
-        height: 30px;
-    }
-    
     .logo-name{
-        font-size: 16px;
-        letter-spacing: 0.1em;
-        line-height: 35px;
-
+        font-size:20px;
     }
     
-    /*burger-menu*/ 
-    .bmenu {
-        width: 100%;
-        top: 10px;
-        left: 87%;    
-        z-index: 2; 
+    .cart{
+        width: 48px;
+        height: 41px;
 
-    } 
-    
-    .menu {   
-        width: 46px;
-        height: 46px;
-        border: none;
-        border-radius: 100%;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: flex-end;
-        padding-right: 10px;
-        
     }
-    
-    .line {
-        width: 15px;
-        height: 2px;
-        margin: 2px;
-        display: flex;    
-        background-color: black;
-    }
-    .line:nth-child(2) {
-        width: 20px;
-    }
-    .line:nth-child(3) {
-        width: 10px;
-    }
-}
 
-/* Tablet */
-@media only screen and (max-width:1280px ){
+    
+
+    
 
 }
