@@ -30,10 +30,10 @@
         border: 2px solid grey;
         background-color: transparent;
         }
-        
+
 /* .sizes buttons*/
 
-    .small {
+    .small, .medium, .large {
         display: block;
         width: 40px;
         height: 40px;
@@ -41,25 +41,6 @@
         border: 2px solid grey;
         background-color: transparent;
         }
-
-    .medium {
-        display: block;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        border: 2px solid grey;
-        background-color: transparent;
-        }
-
-    .large {
-        display: block;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        border: 2px solid grey;
-        background-color: transparent;
-        }
-
     }
 
 
