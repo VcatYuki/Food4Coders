@@ -17,7 +17,7 @@
     width: 35px;
     height: 35px;
 
-    padding:15px;
+    padding:10px;
 }
 
 .cart{
@@ -29,10 +29,11 @@
 
 .logo-name{
     font-size: 16px;
+    font-weight: 500;
     letter-spacing: 0.1em;
     line-height: 35px;
 
-    padding:15px;
+    padding:11px;
     padding-left: 2px;
 
 }
@@ -77,8 +78,10 @@
 
 /* Mobile */
 @media only screen and (max-width:600px ) {
+    
     .navbar{
         justify-content: center;
+        padding:6px;
     }
 
     .bmenu{
@@ -88,7 +91,6 @@
 
     .menu{
         align-items: flex-start;
-
     }
     .cart{
         position:absolute;
@@ -119,6 +121,7 @@
         height: 41px;
 
     }
+
 
     
 
