@@ -1,4 +1,4 @@
-body{
+*{
     font-family: 'open sans';
 }
 
@@ -14,19 +14,16 @@ body{
 @media only screen and (max-width:600px ) {
     .navbar{
         display:flex;
-        justify-content:flex-end;
+        justify-content: space-around;
         
     }
 
     .navbar-logo{
         display:flex;
-        padding-right:15%;
     }
 
     .navbar-cart-bmenu{
         display:flex;
-        justify-content: space-around;
-       
     }
     
     .navbar img{
