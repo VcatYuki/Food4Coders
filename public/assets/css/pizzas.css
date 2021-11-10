@@ -8,7 +8,6 @@
     h2 {
         display: flex;
         justify-content: center;
-        border: 1px solid black;
         }
 
     .bserving {
@@ -18,6 +17,15 @@
         align-items: baseline;
         gap: 20px;
     }
+
+    .sizes {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: baseline;
+        gap: 20px;
+    }
+
 }
 
 

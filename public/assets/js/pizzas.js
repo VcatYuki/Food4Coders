@@ -1,23 +1,3 @@
-/* let sizeList = {
-    small:8,
-    medium:10,
-    large:12
-} 
-let small = ""
-let medium = sizeList.medium
-let large = sizeList.large
-small.addEventListener('click', function (){
-    document.querySelector(".price").innerHTML = sizeList.small;
-})   
-medium.addEventListener('click', function (){
-    document.querySelector(".price").innerHTML = sizeList.medium;
-}) 
-large.addEventListener('click', function (){
-    document.querySelector(".price").innerHTML = sizeList.large;
-}) 
- */
-
-
 let pizzaList = [
     {
         name:"pizza01",
@@ -25,11 +5,6 @@ let pizzaList = [
         img:"assets/img/pizzas/pizza1.png",
         id:0,
         quantity: 0,
-        price: {
-            small:8,
-            medium:10,
-            large:12
-        },
     },
     {
         name:"pizza02",
@@ -37,11 +12,6 @@ let pizzaList = [
         img:"assets/img/pizzas/pizza2.png",
         id:1,
         quantity: 0,
-        price: {
-            small:8,
-            medium:10,
-            large:12
-        },
     },
     {
         name:"pizza03",
@@ -49,11 +19,6 @@ let pizzaList = [
         img:"assets/img/pizzas/pizza3.png",
         id:2,
         quantity: 0,
-        price: {
-            small:8,
-            medium:10,
-            large:12
-        },
     }
 ]
 
@@ -83,3 +48,21 @@ function showMenu() {
 }
 
 showMenu();
+
+let sizeList = {
+    small:8,
+    medium:10,
+    large:12
+} 
+let small = document.querySelector(".small") 
+let medium =  document.querySelector(".medium")
+let large = document.querySelector(".large")
+small.addEventListener('click', function (){
+   document.querySelector(".price").innerHTML = sizeList.small + "€";
+})   
+medium.addEventListener('click', function (){
+    document.querySelector(".price").innerHTML = sizeList.medium + "€";
+}) 
+large.addEventListener('click', function (){
+    document.querySelector(".price").innerHTML = sizeList.large + "€";
+}) 
