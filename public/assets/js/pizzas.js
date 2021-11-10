@@ -2,8 +2,20 @@
     small:8,
     medium:10,
     large:12
-}      */       
-
+} 
+let small = ""
+let medium = sizeList.medium
+let large = sizeList.large
+small.addEventListener('click', function (){
+    document.querySelector(".price").innerHTML = sizeList.small;
+})   
+medium.addEventListener('click', function (){
+    document.querySelector(".price").innerHTML = sizeList.medium;
+}) 
+large.addEventListener('click', function (){
+    document.querySelector(".price").innerHTML = sizeList.large;
+}) 
+ */
 
 
 let pizzaList = [
@@ -52,7 +64,7 @@ function showMenu() {
         `<div data-number="${pizzaList[i].id}">
             <img src="${pizzaList[i].img}">
             <div class="info">
-                <p class="price">€${pizzaList[i].price.small}</p>
+                <p class="price">€</p>
                 <h4>${pizzaList[i].name}</h4>
                 <p>${pizzaList[i].description}</p>
                 <div class="serving">
