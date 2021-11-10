@@ -81,10 +81,18 @@
         justify-content: center;
     }
 
-    .navbar-cart-bmenu{
+    .bmenu{
+        position:absolute;
+        left:0;
+    }
+
+    .menu{
+        align-items: flex-start;
+
+    }
+    .cart{
         position:absolute;
         right:0;
-        flex-direction: column-reverse;
     }
    
 }

@@ -9,3 +9,25 @@
 @media only screen and (min-width: 768px) {
 
 }
+/* .bserving buttons*/
+
+@media only screen and (max-width:600px ) {
+    
+    .sleft {
+        display: block;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        border: 2px solid grey;
+        background-color: transparent;
+        }
+    
+    .rleft {
+        display: block;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        border: 2px solid grey;
+        background-color: transparent;
+        }
+    }
