@@ -51,7 +51,7 @@ function showMenu() {
         plates += `<div data-number="${pizzaList[i].id}">
             <img src="${pizzaList[i].img}">
             <div class="info">
-                <p class="price">€${pizzaList[i].price}</p>
+                <p class="price">€${pizzaList[i].price.small}</p>
                 <h4>${pizzaList[i].name}</h4>
                 <p>${pizzaList[i].description}</p>
                 <div class="serving">

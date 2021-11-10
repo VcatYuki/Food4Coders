@@ -2,22 +2,31 @@
 @media only screen and (max-width:600px ) {
     .navbar{
         display:flex;
-        justify-content: space-around;
+        justify-content: space-between;
+        
         
     }
 
     .navbar-logo{
         display:flex;
+        padding:5%;
         
     }
 
     .navbar-cart-bmenu{
         display:flex;
+        padding:5%;
+        
     }
-    
-    .navbar img{
+
+    .logo{
         width: 35px;
         height: 35px;
+    }
+
+    .cart{
+        width: 30px;
+        height: 30px;
     }
     
     .logo-name{
@@ -33,6 +42,7 @@
         top: 10px;
         left: 87%;    
         z-index: 2; 
+
     } 
     
     .menu {   
@@ -61,4 +71,9 @@
     .line:nth-child(3) {
         width: 10px;
     }
+}
+
+/* Tablet */
+@media only screen and (max-width:1280px ){
+
 }

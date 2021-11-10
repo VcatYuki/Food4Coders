@@ -1,9 +1,7 @@
-@import url(style.css);
 @import url(header.css);
 @import url(buttons.css);
 @import url(pizzas.css);
 
 *{
-    font-family: 'open sans';
-
+    font-family: 'Montserrat', sans-serif;
 }
