@@ -2,6 +2,8 @@
 @import url(buttons.css);
 @import url(pizzas.css);
 
-*{
+body{
     font-family: 'Montserrat', sans-serif;
+    background: url('../img/phone-background.png') no-repeat;
+    
 }
