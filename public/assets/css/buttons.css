@@ -6,7 +6,7 @@
 
 @media only screen and (max-width:600px ) {
 
-    .sleft {
+    .sleft, .rleft {
         display: block;
         width: 28px;
         height: 28px;
@@ -15,49 +15,24 @@
         background-color: transparent;
         }
     
-    .rleft {
-        display: block;
-        width: 28px;
-        height: 28px;
-        border-radius: 50%;
-        border: 2px solid grey;
-        background-color: transparent;
-        }
-        
 /* .sizes buttons*/
 
-    .small {
+    .small, .medium, .large {
         display: block;
         width: 40px;
         height: 40px;
         border-radius: 50%;
         border: 2px solid grey;
+        color: grey;
         background-color: transparent;
+        transition: background-color .6s;
         }
-    .small:hover {
-        color: blue;
+    
+    .small:hover, .medium:hover, .large:hover {
+        background-color: skyblue;
+        color: black; 
+        cursor: pointer;
+        text-shadow: 1px 1px 6px #fff;
+        box-shadow: 1px 1px 6px gray;
     }
-
-    .medium {
-        display: block;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        border: 2px solid grey;
-        background-color: transparent;
-        }
-
-    .large {
-        display: block;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        border: 2px solid grey;
-        background-color: transparent;
-        }
-
-    }
-
-
-
-
+}
