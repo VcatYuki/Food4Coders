@@ -1,10 +1,4 @@
-/* let sizeList = {
-    small:8,
-    medium:10,
-    large:12
-}      */       
-
-
+/* Array de pizzas */
 
 let pizzaList = [
     {
@@ -13,11 +7,6 @@ let pizzaList = [
         img:"assets/img/pizzas/pizza1.png",
         id:0,
         quantity: 0,
-        price: {
-            small:8,
-            medium:10,
-            large:12
-        },
     },
     {
         name:"pizza02",
@@ -25,11 +14,6 @@ let pizzaList = [
         img:"assets/img/pizzas/pizza2.png",
         id:1,
         quantity: 0,
-        price: {
-            small:8,
-            medium:10,
-            large:12
-        },
     },
     {
         name:"pizza03",
@@ -37,28 +21,27 @@ let pizzaList = [
         img:"assets/img/pizzas/pizza3.png",
         id:2,
         quantity: 0,
-        price: {
-            small:8,
-            medium:10,
-            large:12
-        },
     }
 ]
 
+/* Añadir las pizzas al HTML desde el Array */
 function showMenu() {
     let plates ="";
     for (let i = 0; i < pizzaList.length; i++) {
-        plates += `<div data-number="${pizzaList[i].id}">
+        plates += 
+        `<div data-number="${pizzaList[i].id}">
             <img src="${pizzaList[i].img}">
             <div class="info">
-                <p class="price">€${pizzaList[i].price.small}</p>
+                <p class="price">8 €</p>
                 <h4>${pizzaList[i].name}</h4>
                 <p>${pizzaList[i].description}</p>
                 <div class="serving">
                     <h2>SERVING</h2>
+                    <div class="bserving">
                         <button class="sleft" onClick="reduce(this)">-</button>
                         <div class="quantity">${pizzaList[i].quantity}</div>
                         <button class="rleft" onClick="augmentar(this)">+</button>
+                    </div>
                 </div>
                 <button class="addCart"><img class="cart" src="" alt="Shopping Cart">Add to Box</button>
             </div>
@@ -68,3 +51,26 @@ function showMenu() {
 }
 
 showMenu();
+
+
+/* Lista de precios por tamaño y como insertarlo en el HTML con los botones*/
+let sizeList = {
+    small:8,
+    medium:10,
+    large:12
+} 
+
+let small = document.querySelector(".small") 
+small.addEventListener('click', function (){
+   document.querySelector(".price").innerHTML = sizeList.small + " €";
+})
+
+let medium =  document.querySelector(".medium")   
+medium.addEventListener('click', function (){
+    document.querySelector(".price").innerHTML = sizeList.medium + " €";
+}) 
+
+let large = document.querySelector(".large")
+large.addEventListener('click', function (){
+    document.querySelector(".price").innerHTML = sizeList.large + " €";
+}) 

@@ -60,3 +60,46 @@ color: white;
     height: 30px;
     padding-right: 6px;
 }
+/* Tablet */
+@media only screen and (min-width: 768px) {
+}
+
+/* Mobile */
+/* .bserving buttons*/
+
+@media only screen and (max-width:600px ) {
+
+    .sleft, .rleft {
+        display: block;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        border: 1px solid grey;
+        background-color: whitesmoke;
+        }
+    
+/* .sizes buttons*/
+    .small, .medium, .large {
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid grey;
+        color: grey;
+        background-color: whitesmoke;
+        transition: background-color .6s;
+        }
+    
+    .small:hover, .medium:hover, .large:hover {
+        -webkit-transform:scale(1.50);
+        -moz-transform:scale(1.50);
+        -ms-transform:scale(1.50);
+        -o-transform:scale(1.50);
+        transform:scale(1.50);
+        color: black;
+        background-color: white;
+        border: none;
+        cursor: pointer;
+        box-shadow: 1px 1px 4px gray;
+        }
+}

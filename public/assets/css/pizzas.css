@@ -1,19 +1,31 @@
+/*Mobile Version*/
 @media only screen and (max-width:600px ) {
+    .serving {
+        display: flex;
+        flex-direction: column;
+        }
+    
+    h2 {
+        display: flex;
+        justify-content: center;
+        }
 
-.serving {
-    display: flex;
-    flex-direction: column;
+    .bserving {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: baseline;
+        gap: 20px;
     }
 
-h2 {
-    display: flex;
-    justify-content: center;
-    border: 1px solid black;
-    }
-
-.sleft {
-    display: flex;
-    flex-direction: row;
+    .sizes {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: baseline;
+        gap: 20px;
     }
 
 }
+
+
