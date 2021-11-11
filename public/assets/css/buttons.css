@@ -64,12 +64,30 @@ color: white;
 @media only screen and (min-width: 768px) {
 }
 
-/* Mobile */
-/* .bserving buttons*/
-
 @media only screen and (max-width:600px ) {
 
-    .sleft, .rleft {
+    /* Quantity buttons */
+    
+    .serving {
+        display: flex;
+        flex-direction: column;
+        }
+    
+    h2 {
+        display: flex;
+        justify-content: center;
+        }
+
+    .bserving {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: baseline;
+        gap: 20px;
+    }  
+    
+    .sleft,
+    .rleft {
         display: block;
         width: 28px;
         height: 28px;
@@ -79,7 +97,18 @@ color: white;
         }
     
 /* .sizes buttons*/
-    .small, .medium, .large {
+
+    .sizes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    gap: 20px;
+}
+
+    .small,
+    .medium,
+    .large {
         display: block;
         width: 40px;
         height: 40px;
@@ -90,7 +119,9 @@ color: white;
         transition: background-color .6s;
         }
     
-    .small:hover, .medium:hover, .large:hover {
+    .small:hover,
+    .medium:hover,
+    .large:hover {
         -webkit-transform:scale(1.50);
         -moz-transform:scale(1.50);
         -ms-transform:scale(1.50);
