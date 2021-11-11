@@ -29,12 +29,11 @@ function showMenu() {
     let plates ="";
     for (let i = 0; i < pizzaList.length; i++) {
         plates += 
-        `<div data-number="${pizzaList[i].id}">
-            <img src="${pizzaList[i].img}">
-            <div class="info">
-                <p class="price">8 €</p>
+        `<div data-number="${pizzaList[i].id}">    
+            <div class="info">            
                 <h4>${pizzaList[i].name}</h4>
                 <p>${pizzaList[i].description}</p>
+                <p class="price">8 €</p>
                 <div class="serving">
                     <h2>SERVING</h2>
                     <div class="bserving">
@@ -42,7 +41,8 @@ function showMenu() {
                         <div class="quantity">${pizzaList[i].quantity}</div>
                         <button class="rleft" onClick="augmentar(this)">+</button>
                     </div>
-                </div>
+                </div>            
+                <img src="${pizzaList[i].img}">
                 <button class="addCart"><img class="cart" src="" alt="Shopping Cart">Add to Box</button>
             </div>
         </div>`
@@ -54,6 +54,7 @@ showMenu();
 
 
 /* Lista de precios por tamaño y como insertarlo en el HTML con los botones*/
+
 let sizeList = {
     small:8,
     medium:10,
