@@ -1,3 +1,5 @@
+/* Array de pizzas */
+
 let pizzaList = [
     {
         name:"pizza01",
@@ -22,6 +24,7 @@ let pizzaList = [
     }
 ]
 
+/* Añadir las pizzas al HTML desde el Array */
 function showMenu() {
     let plates ="";
     for (let i = 0; i < pizzaList.length; i++) {
@@ -29,7 +32,7 @@ function showMenu() {
         `<div data-number="${pizzaList[i].id}">
             <img src="${pizzaList[i].img}">
             <div class="info">
-                <p class="price">€</p>
+                <p class="price">8 €</p>
                 <h4>${pizzaList[i].name}</h4>
                 <p>${pizzaList[i].description}</p>
                 <div class="serving">
@@ -49,20 +52,25 @@ function showMenu() {
 
 showMenu();
 
+
+/* Lista de precios por tamaño y como insertarlo en el HTML con los botones*/
 let sizeList = {
     small:8,
     medium:10,
     large:12
 } 
+
 let small = document.querySelector(".small") 
-let medium =  document.querySelector(".medium")
-let large = document.querySelector(".large")
 small.addEventListener('click', function (){
-   document.querySelector(".price").innerHTML = sizeList.small + "€";
-})   
+   document.querySelector(".price").innerHTML = sizeList.small + " €";
+})
+
+let medium =  document.querySelector(".medium")   
 medium.addEventListener('click', function (){
-    document.querySelector(".price").innerHTML = sizeList.medium + "€";
+    document.querySelector(".price").innerHTML = sizeList.medium + " €";
 }) 
+
+let large = document.querySelector(".large")
 large.addEventListener('click', function (){
-    document.querySelector(".price").innerHTML = sizeList.large + "€";
+    document.querySelector(".price").innerHTML = sizeList.large + " €";
 }) 
