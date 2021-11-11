@@ -1,0 +1,62 @@
+.wheelbutton{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 85px;
+    height: 182px;
+    left: 50%;
+    top: 0%;
+    background-color: rgba(238, 238, 238, 0.5);
+    border-radius: 42.5px;
+    backdrop-filter: blur(25px);
+}
+
+.arrowright{
+
+    width: 100px;
+    height: 80px;
+    position: relative;
+    border-radius: inherit;
+    border-style: none;
+    background: none;
+}
+
+.arrowleft{
+    width: 100px;
+    height: 80px;
+    position: relative;
+    align-items: center;
+    border-radius: inherit;
+    border-style: none;
+    background:none;
+}
+.arrowleft img,
+.arrowright img {
+    background: transparent;
+}
+
+.addboxbutton{
+position: absolute;
+display: flex;
+width: 160px;
+height: 42px;
+left: 900px;
+top: 292px;
+border-style: none;
+background: #FE3434;
+border-radius: 23.5px;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+font-size: 16px;
+color: white;
+}
+
+.addboxbutton img {
+    background: transparent;
+    width: 30px;
+    height: 30px;
+    padding-right: 6px;
+}
