@@ -4,6 +4,13 @@
 
 body{
     font-family: 'Montserrat', sans-serif;
-    background: url('../img/phone-background.png') no-repeat;
-    
+}
+body {
+    background-image: url('../img/backgrounds/background_tablet_desktop_version.jpg') no-repeat;
+}
+
+@media only screen and (max-width:600px ) {
+    body {
+        background-image: url('../img/backgrounds/background_mobile_version.jpg')no-repeat;
+    }
 }
