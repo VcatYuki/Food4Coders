@@ -6,11 +6,11 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 body {
-    background-image: url('../img/backgrounds/background_tablet_desktop_version.jpg') no-repeat;
+    background-image: url('../img/backgrounds/background_tablet_desktop_version.jpg');
 }
 
 @media only screen and (max-width:600px ) {
     body {
-        background-image: url('../img/backgrounds/background_mobile_version.jpg')no-repeat;
+        background-image: url('../img/backgrounds/background_mobile_version.jpg');
     }
 }
