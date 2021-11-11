@@ -25,6 +25,7 @@ let pizzaList = [
 ]
 
 /* Añadir las pizzas al HTML desde el Array */
+
 function showMenu() {
     let plates ="";
     for (let i = 0; i < pizzaList.length; i++) {
@@ -32,10 +33,11 @@ function showMenu() {
         `<div data-number="${pizzaList[i].id}">    
             <div class="info">            
                 <h4>${pizzaList[i].name}</h4>
-                <p>${pizzaList[i].description}</p>
-                <p class="price">8 €</p>
+                <h5>INFORMATION</H5>
+                <p class="description">${pizzaList[i].description}</p>
+                <p class="price"></p>
                 <div class="serving">
-                    <h2>SERVING</h2>
+                    <h5>SERVING</h5>
                     <div class="bserving">
                         <button class="sleft" onClick="reduce(this)">-</button>
                         <div class="quantity">${pizzaList[i].quantity}</div>
@@ -43,7 +45,6 @@ function showMenu() {
                     </div>
                 </div>            
                 <img src="${pizzaList[i].img}">
-                <button class="addCart"><img class="cart" src="assets/img/icons/whitepizzabox_icon.png" alt="Shopping Cart">Add to Box</button>
             </div>
         </div>`
     }
@@ -74,3 +75,7 @@ let large = document.querySelector(".large")
 large.addEventListener('click', function (){
     document.querySelector(".price").innerHTML = sizeList.large + " €";
 }) 
+
+window.onload = function (){
+    document.querySelector(".price").innerHTML = sizeList.small + " €";
+ };
