@@ -43,13 +43,12 @@ function showMenu() {
                     </div>
                 </div>            
                 <img src="${pizzaList[i].img}">
-                <button class="addCart"><img class="cart" src="" alt="Shopping Cart">Add to Box</button>
+                <button class="addCart"><img class="cart" src="assets/img/icons/whitepizzabox_icon.png" alt="Shopping Cart">Add to Box</button>
             </div>
         </div>`
     }
     document.querySelector(".pizzas").innerHTML = plates;
 }
-
 showMenu();
 
 
