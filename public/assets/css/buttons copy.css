@@ -1,0 +1,136 @@
+.wheelbutton{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 85px;
+    height: 182px;
+    left: 50%;
+    top: 0%;
+    background-color: rgba(238, 238, 238, 0.5);
+    border-radius: 42.5px;
+    backdrop-filter: blur(25px);
+}
+
+.arrowright{
+
+    width: 100px;
+    height: 80px;
+    position: relative;
+    border-radius: inherit;
+    border-style: none;
+    background: none;
+}
+
+.arrowleft{
+    width: 100px;
+    height: 80px;
+    position: relative;
+    align-items: center;
+    border-radius: inherit;
+    border-style: none;
+    background:none;
+}
+.arrowleft img,
+.arrowright img {
+    background: transparent;
+}
+
+.addboxbutton{
+position: absolute;
+display: flex;
+width: 160px;
+height: 42px;
+left: 900px;
+top: 292px;
+border-style: none;
+background: #FE3434;
+border-radius: 23.5px;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+font-size: 16px;
+color: white;
+}
+
+.addboxbutton img {
+    background: transparent;
+    width: 30px;
+    height: 30px;
+    padding-right: 6px;
+}
+/* Tablet */
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (max-width:600px ) {
+
+    /* Quantity buttons */
+    
+    .serving {
+        display: flex;
+        flex-direction: column;
+        }
+    
+    h2 {
+        display: flex;
+        justify-content: center;
+        }
+
+    .bserving {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: baseline;
+        gap: 20px;
+    }  
+    
+    .sleft,
+    .rleft {
+        display: block;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        border: 1px solid grey;
+        background-color: whitesmoke;
+        }
+    
+/* .sizes buttons*/
+
+    .sizes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    gap: 20px;
+}
+
+    .small,
+    .medium,
+    .large {
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid grey;
+        color: grey;
+        background-color: whitesmoke;
+        transition: background-color .6s;
+        }
+    
+    .small:hover,
+    .medium:hover,
+    .large:hover {
+        -webkit-transform:scale(1.50);
+        -moz-transform:scale(1.50);
+        -ms-transform:scale(1.50);
+        -o-transform:scale(1.50);
+        transform:scale(1.50);
+        color: black;
+        background-color: white;
+        border: none;
+        cursor: pointer;
+        box-shadow: 1px 1px 4px gray;
+        }
+}
