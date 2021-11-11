@@ -36,6 +36,18 @@
     background: transparent;
 }
 
+.arrowleft img,
+.arrowright img{
+    background: transparent;
+    filter: grayscale(100%);
+}
+
+.arrowright img:hover,
+.arrowleft img:hover {
+    filter: grayscale(0%);
+}
+
+
 .addCart{
     position: absolute;
     z-index: 1;
