@@ -1,6 +1,5 @@
 /* Tablet */
 @media only screen and (min-width: 768px) {
-
 }
 
 @media only screen and (max-width:600px ) {
@@ -31,8 +30,8 @@
         width: 28px;
         height: 28px;
         border-radius: 50%;
-        border: 2px solid grey;
-        background-color: transparent;
+        border: 1px solid grey;
+        background-color: whitesmoke;
         }
     
 /* .sizes buttons*/
@@ -52,19 +51,24 @@
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        border: 2px solid grey;
+        border: 1px solid grey;
         color: grey;
-        background-color: transparent;
+        background-color: whitesmoke;
         transition: background-color .6s;
         }
     
     .small:hover,
     .medium:hover,
     .large:hover {
-        background-color: skyblue;
-        color: black; 
+        -webkit-transform:scale(1.50);
+        -moz-transform:scale(1.50);
+        -ms-transform:scale(1.50);
+        -o-transform:scale(1.50);
+        transform:scale(1.50);
+        color: black;
+        background-color: white;
+        border: none;
         cursor: pointer;
-        text-shadow: 1px 1px 6px #fff;
-        box-shadow: 1px 1px 6px gray;
-    }
+        box-shadow: 1px 1px 4px gray;
+        }
 }
