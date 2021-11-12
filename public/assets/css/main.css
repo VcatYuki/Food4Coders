@@ -5,8 +5,9 @@
 body{
     font-family: 'Montserrat', sans-serif;
     background-image: url('../img/backgrounds/ipad-background.png');
-    /* height:730px;
-    overflow: hidden; */
+    height:730px;
+    overflow: hidden;
+    background: no-repeat cover;
 }
 
 
