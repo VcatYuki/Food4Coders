@@ -4,6 +4,7 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
+        
     }
     
     .info img{
@@ -47,6 +48,18 @@
         justify-content: center;
         margin: 2%;
     }
+
+    /* .pizza1 {
+        transform: rotate(90deg);
+        position: absolute;
+        bottom: -37%;
+
+    }
+    .pizza2 {
+        transform: rotate(180deg);
+        position: absolute;
+        bottom:-37%;
+    }  */
 
 }
 
