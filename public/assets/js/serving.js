@@ -7,7 +7,8 @@ function aumentar(elemento){
     let textoContador = padre.querySelector("p")
     let bisabuela = padre.parentElement.parentElement
     let bisabuelaId = bisabuela.dataset.numero
-    let index = listaPlatos.find(element => element.id == bisabuelaId)
+    let index = listaPlatos.find(element => element.id == bisabuelaId) /* function (element) {
+         return element.id == bisabuelaId } */
     let indexListaPlatos = listaPlatos.indexOf(index)
     let aumentarCantidad = listaPlatos[indexListaPlatos].cantidad
  
@@ -27,6 +28,8 @@ function reduce(elemento){
     let bisabuela = padre.parentElement.parentElement
     let bisabuelaId= bisabuela.dataset.numero  
     let index = listaPlatos.find(element => element.id == bisabuelaId)
+    /* function (element) {
+         return element.id == bisabuelaId } */
     let indexListaPlatos = listaPlatos.indexOf(index)
     let reduceCantidad = listaPlatos[indexListaPlatos].cantidad
 
@@ -41,7 +44,8 @@ function reduce(elemento){
     listaPlatos[indexListaPlatos].cantidad = reduceCantidad
     
     if(listaPlatos[indexListaPlatos].cantidad == 0){
-        let indice = carrito.find(element => element.id == bisabuelaId)
+        let indice = carrito.find(element => element.id == bisabuelaId) /* function (element) {
+            return element.id == bisabuelaId } */
         let numerito = carrito.indexOf(indice)
         carrito.splice(numerito, 1)
     }

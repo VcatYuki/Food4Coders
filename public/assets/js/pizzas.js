@@ -28,11 +28,15 @@ let pizzaList = [
 
 /* if (pizzaList[i] === pizzaList.indexOf) */
 let plates ="";
-let id = 0;
+let i = 0
 function showMenuAll() {    
     for (let i = 0; i < pizzaList.length; i++) {
+        let foo = "pizza"
+        if (i === 0 ) {
+            foo += " active"
+        }
         plates += 
-        `<div class="pizza${pizzaList[i].id}" data-number="${pizzaList[i].id}">    
+        `<div class="${foo}" data-number="${pizzaList[i].id}">    
             <div class="info">            
                 <h4>${pizzaList[i].name}</h4>
                 <h5>INFORMATION</H5>
@@ -43,7 +47,7 @@ function showMenuAll() {
                     <div class="bserving">
                         <button class="right" onClick="reduce(this)">-</button>
                         <div class="quantity">${pizzaList[i].quantity}</div>
-                        <button class="left" onClick="augmentar(this)">+</button>
+                        <button class="left" onClick="aumentar(this)">+</button>
                     </div>
                 </div>            
                 <img src="${pizzaList[i].img}">
@@ -53,28 +57,33 @@ function showMenuAll() {
     }
     document.querySelector(".pizzas").innerHTML = plates;
 }
-/* showMenuAll(); */
+showMenuAll();
 /* console.log(plates) */
 /* Listeners de las flechas */
-document.querySelector(".arrowright").addEventListener("click", cambiarPizza);
-document.querySelector(".arrowleft").addEventListener("click", cambiarPizza);
+document.querySelector(".arrowright").addEventListener("click", sumPizza);
+document.querySelector(".arrowleft").addEventListener("click", subtractPizza);
 
-function cambiarPizza() {
-    let boton = this.class; 
-    if(boton == '.arrowright') {
-        id --;
-        if(id < 0) {
-            id = pizzaList.length -1; 
+let indexPizza = 0;
+
+function subtractPizza() {    
+        indexPizza --;
+        if(indexPizza < 0) {
+            indexPizza = pizzaList.length -1; 
         } 
-    } else {
-        id ++;
-        if(id == pizzaList.length) {
-            id = 0;
-        } 
+        console.log(indexPizza)
     }
-    var pizzaAMostrar = pizzaList[id];
-    document.querySelector(`.pizzas`).innerHTML = pizzaAMostrar
-}
+
+function sumPizza() {
+        indexPizza ++;
+        if(indexPizza == pizzaList.length) {
+            indexPizza = 0;
+        }        
+        console.log(indexPizza)
+    }
+    /*
+    var indexPizza = pizzaList[id];
+    document.querySelector(`.pizzas`).innerHTML = indexPizza
+} */
 
 
 /* Lista de precios por tamaño y como insertarlo en el HTML con los botones*/
@@ -100,8 +109,8 @@ large.addEventListener('click', function (){
     document.querySelector(".price").innerHTML = sizeList.large + " €";
 }) 
 
-/* window.onload = function (){
+window.onload = function (){
     document.querySelector(".price").innerHTML = sizeList.small + " €";
- }; */
+ };
 
  
