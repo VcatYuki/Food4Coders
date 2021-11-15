@@ -1,3 +1,5 @@
+
+
 //paso 1 --> crear el array de imagenes
 var pizzaList = ["pizza1.png", "pizza2.png", "pizza3.png"]
 
