@@ -24,53 +24,53 @@ let pizzaList = [
     }
 ]
 
+let sizeList = {
+    small:8,
+    medium:10,
+    large:12
+} 
+
 /* Añadir las pizzas al HTML desde el Array */
 
-/* if (pizzaList[i] === pizzaList.indexOf) */
 let plates ="";
-let i = 0
-function showMenuAll() {    
-    for (let i = 0; i < pizzaList.length; i++) {
-        let foo = "pizza"
-        if (i === 0 ) {
-            foo += " active"
-        }
-        plates += 
-        `<div class="${foo}" data-number="${pizzaList[i].id}">    
+let indexPizza = 0;
+function showMenu() {    
+    for (let i = 0; i < pizzaList.length; i++) { 
+        plates = 
+        `<div class="pizza" data-number="${pizzaList[indexPizza].id}">    
             <div class="info">            
-                <h4>${pizzaList[i].name}</h4>
+                <h4>${pizzaList[indexPizza].name}</h4>
                 <h5>INFORMATION</H5>
-                <p class="description">${pizzaList[i].description}</p>
+                <p class="description">${pizzaList[indexPizza].description}</p>
                 <p class="price"></p>
                 <div class="serving">
                     <h5>SERVING</h5>
                     <div class="bserving">
                         <button class="right" onClick="reduce(this)">-</button>
-                        <div class="quantity">${pizzaList[i].quantity}</div>
+                        <div class="quantity">${pizzaList[indexPizza].quantity}</div>
                         <button class="left" onClick="aumentar(this)">+</button>
                     </div>
                 </div>            
-                <img src="${pizzaList[i].img}">
+                <img src="${pizzaList[indexPizza].img}">
             </div>
         </div>`
-        console.log (pizzaList[i].name)
+        
     }
     document.querySelector(".pizzas").innerHTML = plates;
 }
-showMenuAll();
-/* console.log(plates) */
+showMenu();
 /* Listeners de las flechas */
 document.querySelector(".arrowright").addEventListener("click", sumPizza);
 document.querySelector(".arrowleft").addEventListener("click", subtractPizza);
 
-let indexPizza = 0;
-
 function subtractPizza() {    
         indexPizza --;
         if(indexPizza < 0) {
-            indexPizza = pizzaList.length -1; 
+            indexPizza = pizzaList.length -1;   
         } 
-        console.log(indexPizza)
+        console.log(indexPizza)                  
+        showMenu();
+        document.querySelector(".price").innerHTML = sizeList.small + " €";
     }
 
 function sumPizza() {
@@ -78,21 +78,14 @@ function sumPizza() {
         if(indexPizza == pizzaList.length) {
             indexPizza = 0;
         }        
-        console.log(indexPizza)
+        console.log(indexPizza)        
+        showMenu();
+        document.querySelector(".price").innerHTML = sizeList.small + " €";
     }
-    /*
-    var indexPizza = pizzaList[id];
-    document.querySelector(`.pizzas`).innerHTML = indexPizza
-} */
-
 
 /* Lista de precios por tamaño y como insertarlo en el HTML con los botones*/
 
-let sizeList = {
-    small:8,
-    medium:10,
-    large:12
-} 
+
 
 let small = document.querySelector(".small") 
 small.addEventListener('click', function (){

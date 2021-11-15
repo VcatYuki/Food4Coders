@@ -1,10 +1,15 @@
+.info img{
+    z-index:-1;
+    position:absolute;
+    bottom: -165px;
+    width: 100%;
+}
 
 .info{
     display: flex;
     justify-content: center;
     flex-direction: column;
     font-size:13px;
-    
 }
 
 
@@ -14,6 +19,7 @@ h4 {
     font-size:25px;
     margin: 10px;
 }
+
 h5 {
     display: flex;
     justify-content: center;
@@ -21,11 +27,13 @@ h5 {
     color:lightgrey;
     margin: 2px;
 }
+
 .description {
     text-align: justify;
     padding:2% 8%;
     margin: 0%;
 }
+
 .bottom_box {
     position: absolute;
     background-color: rgba(238, 238, 238, 0.5);
@@ -34,6 +42,7 @@ h5 {
     backdrop-filter: blur(25px);
     bottom: 0%;
 }
+
 .price {
     position: absolute;
     z-index: 1;
@@ -58,14 +67,6 @@ h5 {
 
 /*Mobile Version*/
 @media only screen and (max-width:600px ) {
-    
-    .info img{
-        z-index:-1;
-        position:absolute;
-        bottom: -165px;
-        width: 100%;
-    }
-    
 }
 
 
