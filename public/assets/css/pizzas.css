@@ -49,7 +49,9 @@
         justify-content: center;
         margin: 2%;
     }
-
+    .pizza .active {
+        
+    }
     /* .pizza1 {
         transform: rotate(90deg);
         position: absolute;
