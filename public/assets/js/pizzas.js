@@ -25,12 +25,14 @@ let pizzaList = [
 ]
 
 /* Añadir las pizzas al HTML desde el Array */
+
+/* if (pizzaList[i] === pizzaList.indexOf) */
 let plates ="";
-function showMenu() {
-    
+let id = 0;
+function showMenuAll() {    
     for (let i = 0; i < pizzaList.length; i++) {
         plates += 
-        `<div data-number="${pizzaList[i].id}">    
+        `<div class="pizza${pizzaList[i].id}" data-number="${pizzaList[i].id}">    
             <div class="info">            
                 <h4>${pizzaList[i].name}</h4>
                 <h5>INFORMATION</H5>
@@ -47,11 +49,32 @@ function showMenu() {
                 <img src="${pizzaList[i].img}">
             </div>
         </div>`
+        console.log (pizzaList[i].name)
     }
     document.querySelector(".pizzas").innerHTML = plates;
 }
-showMenu();
-console.log(plates)
+/* showMenuAll(); */
+/* console.log(plates) */
+/* Listeners de las flechas */
+document.querySelector(".arrowright").addEventListener("click", cambiarPizza);
+document.querySelector(".arrowleft").addEventListener("click", cambiarPizza);
+
+function cambiarPizza() {
+    let boton = this.class; 
+    if(boton == '.arrowright') {
+        id --;
+        if(id < 0) {
+            id = pizzaList.length -1; 
+        } 
+    } else {
+        id ++;
+        if(id == pizzaList.length) {
+            id = 0;
+        } 
+    }
+    var pizzaAMostrar = pizzaList[id];
+    document.querySelector(`.pizzas`).innerHTML = pizzaAMostrar
+}
 
 
 /* Lista de precios por tamaño y como insertarlo en el HTML con los botones*/
@@ -77,6 +100,8 @@ large.addEventListener('click', function (){
     document.querySelector(".price").innerHTML = sizeList.large + " €";
 }) 
 
-window.onload = function (){
+/* window.onload = function (){
     document.querySelector(".price").innerHTML = sizeList.small + " €";
- };
+ }; */
+
+ 
