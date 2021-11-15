@@ -1,6 +1,7 @@
 @import url(header.css);
 @import url(buttons.css);
 @import url(pizzas.css);
+@import url(tablet.css);
 
 body{
     font-family: 'Montserrat', sans-serif;

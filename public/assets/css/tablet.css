@@ -1,0 +1,26 @@
+/* Tablet */
+@media only screen and (min-width: 768px){
+
+    main{
+        display:flex;
+        position: relative;
+    }
+
+    /*.pizzas{
+        background-color: blueviolet;
+        width: 100%;
+        display:flex;
+        position: absolute;
+        right:0;
+    }
+    */
+
+    /*.info img{
+        position:absolute;
+        right:50%;
+        top:80%;
+        width: 60%;
+    }
+    */
+
+}
