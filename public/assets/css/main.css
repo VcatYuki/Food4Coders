@@ -7,11 +7,6 @@ body{
     background-image: url('../img/backgrounds/ipad-background.png');
     background-color: #F1EEEE;
     background-repeat: no-repeat;
-    background-size: 100% 100%;  
-    overflow: hidden;
-    
-    
-    
 }
 /*html{
     max-height:826px;

@@ -2,7 +2,7 @@
 
 let pizzaList = [
     {
-        name:"pizza01",
+        name:"Pizza Frankfurt",
         description:"Pizza con champiñones, frankfurt, aceitunas negras y pimiento verde y rojo",
         img:"assets/img/pizzas/pizza1.png",
         id:0,
@@ -16,8 +16,8 @@ let pizzaList = [
         quantity: 1,
     },
     {
-        name:"pizza03",
-        description:"Pizza de verduras y aceitunas negras",
+        name:"Pizza Caprese",
+        description:"Pizza de tomate, mozzarella y albahaca",
         img:"assets/img/pizzas/pizza3.png",
         id:2,
         quantity: 1,
