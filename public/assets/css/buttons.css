@@ -161,7 +161,7 @@
     }
 
 }
-
+/* Mobile */
 @media only screen and (max-width:600px ) {
     
     /* Quantity buttons */
@@ -169,12 +169,12 @@
     .serving {
         display: flex;
         flex-direction: column;
-        }
+    }
     
     h2 {
         display: flex;
         justify-content: center;
-        }
+    }
 
     .bserving {
         display: flex;
@@ -203,12 +203,13 @@
         transform:scale(1.50);
     }
     
-/* .sizes buttons*/
+    /* .sizes buttons*/
 
     .sizes {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     gap: 20px;
     position: absolute;
     top: 50%;
@@ -317,4 +318,5 @@
         height: 30px;
         padding-right: 6px;
     }
+
 }
