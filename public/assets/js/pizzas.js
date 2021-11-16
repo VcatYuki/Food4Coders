@@ -44,6 +44,7 @@ function showMenu() {
                     <h5>INFORMATION</H5>
                     <p class="description">${pizzaList[indexPizza].description}</p>
                 </div>
+                <h3>PRICE</h3>
                 <p class="price"></p>
                 <div class="serving">
                     <h5>SERVING</h5>
