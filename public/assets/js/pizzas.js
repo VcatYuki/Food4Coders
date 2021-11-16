@@ -6,21 +6,21 @@ let pizzaList = [
         description:"Pizza con champiñones, frankfurt, aceitunas negras y pimiento verde y rojo",
         img:"assets/img/pizzas/pizza1.png",
         id:0,
-        quantity: 0,
+        quantity: 1,
     },
     {
         name:"pizza02",
         description:"Pizza con jamón y pimiento",
         img:"assets/img/pizzas/pizza2.png",
         id:1,
-        quantity: 0,
+        quantity: 1,
     },
     {
         name:"pizza03",
         description:"Pizza de verduras y aceitunas negras",
         img:"assets/img/pizzas/pizza3.png",
         id:2,
-        quantity: 0,
+        quantity: 1,
     }
 ]
 
@@ -40,15 +40,17 @@ function showMenu() {
         `<div class="pizza" data-number="${pizzaList[indexPizza].id}">    
             <div class="info">            
                 <h4>${pizzaList[indexPizza].name}</h4>
-                <h5>INFORMATION</H5>
-                <p class="description">${pizzaList[indexPizza].description}</p>
+                <div class="infodesc">
+                    <h5>INFORMATION</H5>
+                    <p class="description">${pizzaList[indexPizza].description}</p>
+                </div>
                 <p class="price"></p>
                 <div class="serving">
                     <h5>SERVING</h5>
                     <div class="bserving">
-                        <button class="right" onClick="reduce(this)">-</button>
-                        <div class="quantity">${pizzaList[indexPizza].quantity}</div>
-                        <button class="left" onClick="aumentar(this)">+</button>
+                        <button class="counter-minus">-</button>
+                        <div class="counter-display">${pizzaList[indexPizza].quantity}</div>
+                        <button class="counter-plus">+</button>
                     </div>
                 </div>            
                 <img src="${pizzaList[indexPizza].img}">
@@ -70,7 +72,8 @@ function subtractPizza() {
         } 
         console.log(indexPizza)                  
         showMenu();
-        document.querySelector(".price").innerHTML = sizeList.small + " €";
+        updateDisplay();
+        document.querySelector(".price").innerHTML = sizeList.small + " €/pizza";
     }
 
 function sumPizza() {
@@ -80,7 +83,8 @@ function sumPizza() {
         }        
         console.log(indexPizza)        
         showMenu();
-        document.querySelector(".price").innerHTML = sizeList.small + " €";
+        updateDisplay();
+        document.querySelector(".price").innerHTML = sizeList.small + " €/pizza";
     }
 
 /* Lista de precios por tamaño y como insertarlo en el HTML con los botones*/
@@ -89,21 +93,21 @@ function sumPizza() {
 
 let small = document.querySelector(".small") 
 small.addEventListener('click', function (){
-   document.querySelector(".price").innerHTML = sizeList.small + " €";
+   document.querySelector(".price").innerHTML = sizeList.small+ " €/pizza";
 })
 
 let medium =  document.querySelector(".medium")   
 medium.addEventListener('click', function (){
-    document.querySelector(".price").innerHTML = sizeList.medium + " €";
+    document.querySelector(".price").innerHTML = sizeList.medium + " €/pizza";
 }) 
 
 let large = document.querySelector(".large")
 large.addEventListener('click', function (){
-    document.querySelector(".price").innerHTML = sizeList.large + " €";
+    document.querySelector(".price").innerHTML = sizeList.large + " €/pizza";
 }) 
 
 window.onload = function (){
-    document.querySelector(".price").innerHTML = sizeList.small + " €";
+    document.querySelector(".price").innerHTML = sizeList.small+ " €/pizza";
  };
 
  
