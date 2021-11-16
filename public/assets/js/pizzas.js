@@ -21,6 +21,13 @@ let pizzaList = [
         img:"assets/img/pizzas/pizza3.png",
         id:2,
         quantity: 1,
+    },
+    {
+        name:"pizza04",
+        description:"Pizza de verduras y aceitunas negras",
+        img:"assets/img/pizzas/pizza4.png",
+        id:3,
+        quantity: 1,
     }
 ]
 
