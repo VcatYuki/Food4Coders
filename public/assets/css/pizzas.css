@@ -27,7 +27,7 @@
     }
     .infodesc {
         padding-top: 8%;
-        padding-left: 5%;
+        padding-left: 9%;
         max-width: 435px;
     }
     h5 {
@@ -72,16 +72,27 @@
     .info img{
         z-index:-1;
         position:absolute;
-        bottom: -30%;
+        bottom: -20%;
+        left:-6%;
         width: 100%;
+
+        border-radius:50%;
+        border: 25px white solid;
+        outline:30px rgba(255, 255, 255, 0.397) solid;
     }
     .info{
         display: flex;
         justify-content: center;
-        flex-direction: column;    
+        flex-direction: column;
+        
     }
+
+    .infodesc {
+        margin-bottom:13px ;
+    }
+
     h3 {
-        visibility: hidden;
+        display:none;
     }
     h4 {
         display: flex;
@@ -116,9 +127,7 @@
         bottom: 2.5%;
         display: flex;
         justify-content: center;
-        margin: 2%;
-
-    
-}
+        margin: 2%;   
+    }
 
 }
