@@ -9,8 +9,8 @@ let pizzaList = [
         quantity: 1,
     },
     {
-        name:"pizza02",
-        description:"Pizza con jamón y pimiento",
+        name:"Pizza Serrana",
+        description:"Pizza con jamón serrano y queso",
         img:"assets/img/pizzas/pizza2.png",
         id:1,
         quantity: 1,
@@ -20,6 +20,13 @@ let pizzaList = [
         description:"Pizza de tomate, mozzarella y albahaca",
         img:"assets/img/pizzas/pizza3.png",
         id:2,
+        quantity: 1,
+    },
+    {
+        name:"pizza04",
+        description:"Pizza de verduras y aceitunas negras",
+        img:"assets/img/pizzas/pizza4.png",
+        id:3,
         quantity: 1,
     }
 ]
