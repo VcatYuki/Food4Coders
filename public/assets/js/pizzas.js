@@ -41,8 +41,7 @@ let sizeList = {
 
 let plates ="";
 let indexPizza = 0;
-function showMenu() {    
-    for (let i = 0; i < pizzaList.length; i++) { 
+function showMenu() {         
         plates = 
         `<div class="pizza" data-number="${pizzaList[indexPizza].id}">    
             <div class="info">            
@@ -65,11 +64,14 @@ function showMenu() {
             </div>
         </div>`
         
-    }
     document.querySelector(".pizzas").innerHTML = plates;
+    
 }
 showMenu();
+
+
 /* Listeners de las flechas */
+
 document.querySelector(".arrowright").addEventListener("click", sumPizza);
 document.querySelector(".arrowleft").addEventListener("click", subtractPizza);
 
