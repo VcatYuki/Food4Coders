@@ -8,6 +8,11 @@ body{
     background-color: #F1EEEE;
     background-repeat: no-repeat;
 }
+
+button {
+    cursor:pointer;
+}
+
 /*html{
     max-height:826px;
     overflow: hidden;
