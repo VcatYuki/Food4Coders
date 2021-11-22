@@ -20,7 +20,7 @@
                 <div class="logo-name">PIZZERIA</div>
             </div>
             <div class="navbar-cart-bmenu">
-                <img class="cart" src="assets/img/icons/cart.png" alt="Shopping Cart">
+                <img class="box-cart" src="assets/img/icons/cart.png" alt="Shopping Cart">
                 <div class="bmenu">
                     <button class="menu">
                         <div class="line"></div>
@@ -41,16 +41,48 @@
             <button class="arrowright"> <img src="assets/img/icons/right-arrow-red.png"></button>
             <button class="arrowleft"><img src="assets/img/icons/left-arrow-red.png"></button>
         </div> 
+
         <div class="sizes">
             <button class="small">S</button>
             <button class="medium">M</button>
             <button class="large">L</button>
         </div> 
+
         <div class="bottom_box">
             <button class="addCart" onclick="addToCart(pizzaList[indexPizza].id)"><img class="bcart" src="assets/img/icons/whitepizzabox_icon.png" alt="Shopping Cart">Add to Box</button>
-            
         </div>
+
     </main>
+
+    <div class="cart">
+        <h5>My Cart</h5>
+        <div class="cart-header">
+            <div class="column1">Item</div>
+            <div class="column2">Unit price</div>
+        </div>
+    <!--Render cart items here-->
+        <div class="cart-items">
+            <div class="cart-item">
+                <div class="item-info">
+                    <img src="">
+                    <h4>Pizza 1</h4>
+                </div>
+
+                <div class="unit-price">
+                    <small>$</small>8.00
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-footer">
+            <div class="subtotal">
+                Subtotal (0 items) : $0
+            </div>
+            <div class="checkout">
+                Proceed to checkout
+            </div>
+        </div>
+    </div>
 
     <script src="./assets/js/pizzas.js"></script>
     <script src="./assets/js/serving.js"></script>
