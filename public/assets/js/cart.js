@@ -1,10 +1,10 @@
 //Show the cart - onclick
 // -> how to only show when we click on the cart? ask group
 function showCart(){
-    document.querySelector(".cart").classList.toggle("show")
+    document.querySelector(".cart").classList.toggle("show");
 }
 
-document.querySelector(".box-cart").addEventListener("click", show)
+document.querySelector(".box-cart").addEventListener("click", showCart);
 
 //Selecting the shopping cart from HTML
 const cartItems = document.querySelector(".cart-items");
@@ -39,13 +39,13 @@ function addToCart(id) {
 //Update cart
 
 function updateCart(){
-    showCartItems();
+    //showCartItems();
     //showSubtotal();
 }
 
 //Show/render Cart Items
-function showCartItems(){
-    cart.forEach(element => {
+//function showCartItems(){
+//    cart.forEach(element => {
         
-    });
-};
+//    });
+//};
