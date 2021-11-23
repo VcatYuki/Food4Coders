@@ -5,12 +5,10 @@ let count = 1;
 updateDisplay();
 counterPlusEle.addEventListener("click", () => {
     count++;
-    console.log(count);
     updateDisplay();   
 });
 counterMinEle.addEventListener("click", () => {
     count--;
-    console.log(count);
     updateDisplay();   
     
     if (count === 0) {
@@ -22,6 +20,8 @@ counterMinEle.addEventListener("click", () => {
 function updateDisplay() {
     counterDispEle.innerHTML = count;
 };
+
+
 
 /* 
 function changePricePlus() {

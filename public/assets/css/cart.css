@@ -1,9 +1,11 @@
 .cart{
+    z-index: 2;
     display: none;
-    width: 95%;
-    background-color: white;
+    width: 100%;
+    height:100%;
+    background-color: rgb(241, 239, 239);
     color: #010020;
-    border-radius: 10px;
+    border-radius: 20px;
     margin-top: 5px;
     position: absolute;
 
@@ -11,5 +13,72 @@
 
 .active{
     display:block;
+}
+
+.cart-item{
+    display:flex;
+    
+}
+
+.cart-item img{
+    width:100px;
+    margin-left:10px;
+}
+
+.cart-item h4{
+    font-size:13px;
+    margin-left:10px;
+}
+
+.cart-counter{
+    display:flex;
+    
+  
+}
+
+.btn{
+    border-radius: 50%;
+    border:none;
+}
+
+.cart-footer{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    position:fixed;
+    bottom:0;
+
+    background-color: lightgray;
+    border-radius: 20px 20px 0 0;
+    
+    height: 25vh;
+    padding:5%;
+}
+
+.subtotal{
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkout{
+    border-radius: 25px;
+    background: #FE3434;
+    width: 250px;
+    height: 42px;
+
+    font-size: 16px;
+    color:white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkout:active{
+   width: 275px;
+   height: 50px;
 }
 

@@ -36,13 +36,12 @@
 
 /*burger-menu*/ 
 .bmenu {
-    width: 100%;
     top: 10px;
     left: 87%;    
     z-index: 2; 
 
     padding:15px;
-    pointer-events: none;
+    /*pointer-events: none;*/
 } 
 
 .menu {   
