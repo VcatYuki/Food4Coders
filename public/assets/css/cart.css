@@ -15,10 +15,18 @@
     display:block;
 }
 
+.cart-header{
+    display: flex;
+    justify-content: space-around;
+
+    padding-top:2%;
+}
+
 .cart-item{
     display:flex;
-    
+    padding:10px 0;
 }
+
 
 .cart-item img{
     width:100px;
@@ -43,7 +51,6 @@
 
 .cart-footer{
     display:flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -52,6 +59,7 @@
     bottom:0;
 
     background-color: lightgray;
+    backdrop-filter: blur(25px);
     border-radius: 20px 20px 0 0;
     
     height: 25vh;

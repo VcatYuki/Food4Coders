@@ -124,3 +124,7 @@ window.onload = function (){
     document.querySelector(".price").innerHTML = sizeList.small+ " €/pizza";
  };
 
+ function sendCart() {
+    showCart();
+
+ }
