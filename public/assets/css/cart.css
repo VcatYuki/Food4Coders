@@ -1,4 +1,9 @@
-.cart{
-    display:none;
+#cart{
+    position: absolute;
+    left: -200px;
+}
+.show {
+    left: 0px;
+    background: turquoise;
 }
 
