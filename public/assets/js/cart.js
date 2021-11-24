@@ -34,7 +34,7 @@ function addToCart(id) {
         const item = getItem(id, pizzaList);
         cart.push({
             ...item,
-         /*    name: item.name,
+         /* name: item.name,
             description: item.descriptio,
             img: item.img,
             id:item.id,

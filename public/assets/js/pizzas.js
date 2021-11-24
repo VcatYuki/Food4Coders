@@ -63,8 +63,12 @@ function showMenu() {
                     </div>
 
                       
-                </div>            
-                <img src="${pizzaList[indexPizza].img}">
+                </div>
+                <div class="boxPizzas">
+                    <img class="pleft" src="${pizzaList[indexPizza].img}">            
+                    <img class="pcenter" src="${pizzaList[indexPizza].img}">
+                    <img class="pright" src="${pizzaList[indexPizza+1].img}">
+                </div>
             </div>
         </div>`
         

@@ -3,7 +3,7 @@ let counterMinEle = document.querySelector('.counter-minus');
 let counterPlusEle = document.querySelector('.counter-plus');
 let count = 1;
 updateDisplay();
-/*counterPlusEle.addEventListener("click", () => {
+counterPlusEle.addEventListener("click", () => {
     count++;
     updateDisplay();   
 });
@@ -15,7 +15,7 @@ counterMinEle.addEventListener("click", () => {
         count = 1;
         updateDisplay();
     }
-}); */
+});
 
 function updateDisplay() {
     counterDispEle.innerHTML = count;
@@ -30,12 +30,12 @@ function updateDisplay() {
 
     
 
-[document.querySelector('.counter-plus')].forEach(item => {
+/* [document.querySelector('.counter-plus')].forEach(item => {
   item.addEventListener('click', event => {
     count++;
     updateDisplay(); 
   })
-})
+}) */
 
 /* 
 function changePricePlus() {
