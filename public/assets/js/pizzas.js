@@ -55,14 +55,11 @@ function showMenu() {
                 <p class="price"></p>
                 <div class="serving">
                     <h5>SERVING</h5>
-                    
                     <div class="bserving">
                         <button class="counter-minus">-</button>
                         <div class="counter-display">${pizzaList[indexPizza].quantity}</div>
                         <button class="counter-plus">+</button>
                     </div>
-
-                      
                 </div>            
                 <img src="${pizzaList[indexPizza].img}">
             </div>
@@ -71,6 +68,7 @@ function showMenu() {
     document.querySelector(".pizzas").innerHTML = plates;
 }
 showMenu();
+
 //->Create and add a funcion updateEventListeners//
 
 

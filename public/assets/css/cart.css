@@ -22,6 +22,12 @@
     padding-top:2%;
 }
 
+.cart-items{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .cart-item{
     display:flex;
     padding:10px 0;
@@ -38,16 +44,21 @@
     margin-left:10px;
 }
 
-.cart-counter{
+.units{
     display:flex;
-    
+    gap:10px;
   
 }
 
 .btn{
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
-    border:none;
+    border: 1px solid grey;
+    background-color: whitesmoke;
+
 }
+
 
 .cart-footer{
     display:flex;

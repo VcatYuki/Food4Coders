@@ -3,23 +3,33 @@ let counterMinEle = document.querySelector('.counter-minus');
 let counterPlusEle = document.querySelector('.counter-plus');
 let count = 1;
 updateDisplay();
-counterPlusEle.addEventListener("click", () => {
-    count++;
-    updateDisplay();   
-});
-counterMinEle.addEventListener("click", () => {
-    count--;
-    updateDisplay();   
-    
-    if (count === 0) {
-        count = 1;
-        updateDisplay();
-    }
-});
+
+
+function conterPizzas (operation) {
+
+
+
+}
+
+    counterPlusEle.addEventListener("click", () => {
+        count++;
+        updateDisplay();   
+    });
+    counterMinEle.addEventListener("click", () => {
+        count--;
+        updateDisplay();   
+        
+        if (count === 0) {
+            count = 1;
+            updateDisplay();
+        }
+    });
+
 
 function updateDisplay() {
     counterDispEle.innerHTML = count;
 };
+
 
 /* document.querySelectorAll('.counter-plus').forEach(item => {
     item.addEventListener('click', () => {
