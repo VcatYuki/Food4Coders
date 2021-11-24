@@ -21,6 +21,14 @@ function updateDisplay() {
     counterDispEle.innerHTML = count;
 };
 
+/* document.querySelectorAll('.counter-plus').forEach(item => {
+    item.addEventListener('click', () => {
+        count++;
+        updateDisplay();   
+    })
+})   */  
+
+    
 
 [document.querySelector('.counter-plus')].forEach(item => {
   item.addEventListener('click', event => {

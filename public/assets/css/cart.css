@@ -63,6 +63,7 @@
     border-radius: 20px 20px 0 0;
     
     height: 25vh;
+    
     padding:5%;
 }
 
@@ -90,3 +91,13 @@
    height: 50px;
 }
 
+/* Tablet */
+@media only screen and (min-width:601px) {
+
+    .cart-footer{
+        width:95%;
+    }
+
+
+
+}

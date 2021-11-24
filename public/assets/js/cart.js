@@ -3,32 +3,44 @@ let buttonCart = document.querySelector(".button-cart");
 let showCart = document.querySelector(".cart");
  
 function showCarrito(){
-    console.log('hi')
     showCart.classList.toggle("active");
 }
 buttonCart.addEventListener('click', showCarrito);
-
 
 //Selecting the shopping cart from HTML
 const cartItems = document.querySelector(".cart-items");
 
 // -> continue here!!!
 
-//Cart array
+//Empty Cart array
 let cart = [];
 
-//Add to Cart
+function getItem(id, list){
+  let item =  list.find((e)=>e.id === id);
+  console.log(item)
+  return item 
+}
+
+//Add to Cart fuction
 function addToCart(id) {
+    //let valido = (e)=>{e.id === id}
     //check if product already exists in the cart
-    if (cart.some((item) => item.id === id)){
-        alert("Pizza already in the box")
+    if (cart.some((e)=> e.id === id)){
+        alert("Pizza already in the box");
+       
     }
     else {
-        const item = pizzaList.find((pizzaList) => pizzaList.id === id)
-
+      //const item = pizzaList.find((pizzaList) => pizzaList.id === id)
+        const item = getItem(id, pizzaList);
         cart.push({
-            ...item, 
+            ...item,
+         /*    name: item.name,
+            description: item.descriptio,
+            img: item.img,
+            id:item.id,
+            quantity:1, */
             numberOfUnits:1,
+            size:`M`
         });
     }
     
@@ -65,9 +77,9 @@ function renderCartItems(){
     });
 }
 
-//buttons or 'onclick' is not working!!! need to fix that 
+//quantity buttons or 'onclick' is not working!!! need to fix that 
 
-//change number of units 
+//Change number of units 
 
 function changeNumberofUnits (action, id) {
     cart = cart.map((item) => {
