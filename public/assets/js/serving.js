@@ -2,44 +2,60 @@ let counterDispEle = document.querySelector('.counter-display');
 let counterMinEle = document.querySelector('.counter-minus');
 let counterPlusEle = document.querySelector('.counter-plus');
 let count = 1;
-updateDisplay();
 
+/*CAMBIO DEL CONTADOR CON SWITCH*/
 
-function conterPizzas (operation) {
+function SumaRestaPizza (operacion){
+    switch (operacion) {
+    case 'SUMA': 
+    count = count + 1;
+    break
+    case 'RESTA': 
+    if (count !=0){ 
+      count = count - 1;
+    }
+    break
+    }
+}   
 
+counterPlusEle.addEventListener("click", () => {
+    SumaRestaPizza('SUMA');
+    updateDisplay();   
+});
 
-
-}
-
-    counterPlusEle.addEventListener("click", () => {
-        count++;
-        updateDisplay();   
-    });
-    counterMinEle.addEventListener("click", () => {
-        count--;
-        updateDisplay();   
-        
-        if (count === 0) {
-            count = 1;
-            updateDisplay();
-        }
-    });
-
+counterMinEle.addEventListener("click", () => {
+    SumaRestaPizza('RESTA');
+    updateDisplay();   
+});
 
 function updateDisplay() {
     counterDispEle.innerHTML = count;
 };
 
 
-/* document.querySelectorAll('.counter-plus').forEach(item => {
-    item.addEventListener('click', () => {
-        count++;
-        updateDisplay();   
-    })
-})   */  
+/*
+updateDisplay();
 
-    
+counterPlusEle.addEventListener("click", () => {
+    count++;
+    updateDisplay();   
+});
 
+counterMinEle.addEventListener("click", () => {
+    count--;
+    updateDisplay();   
+        
+    if (count === 0) {
+        count = 1;
+        updateDisplay();
+    }
+});
+
+
+function updateDisplay() {
+    counterDispEle.innerHTML = count;
+};
+ 
 
 /* 
 function changePricePlus() {

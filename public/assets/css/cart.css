@@ -25,18 +25,20 @@
 .cart-items{
     display:flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .cart-item{
     display:flex;
+    justify-content: space-around;
+    align-items: center;
     padding:10px 0;
 }
 
 
+
 .cart-item img{
     width:100px;
-    margin-left:10px;
+    
 }
 
 .cart-item h4{
@@ -46,6 +48,7 @@
 
 .units{
     display:flex;
+    align-items: center;
     gap:10px;
   
 }
@@ -107,8 +110,50 @@
 
     .cart-footer{
         width:95%;
+        height:19vh;
+        flex-direction: column;
+        
+
+        font-size: 23px;
     }
 
+    .cart-header{
+        font-size:26px;
+    }
 
+    .cart-item img{
+        width:207px;
+        
+    }
+    
+    .cart h5{
+        font-size: 35px;
+        justify-content: center;
+    }
 
+    .cart-item h4{
+        font-size:22px;
+    }
+
+    .units{
+        gap: 11px;
+        font-size: 22px;
+    }
+
+    .unit-price{
+        font-size: 28px;
+    }
+
+    .btn{
+        width: 40px;
+        height: 40px;
+
+        font-size: 28px;
+    }
+
+    .checkout{
+        width: 376px;
+        height: 67px;
+        font-size: 22px;
+    }
 }

@@ -7,6 +7,7 @@ let pizzaList = [
         img:"assets/img/pizzas/pizza1.png",
         id:0,
         quantity: 1,
+        price: 9
     },
     {
         name:"Pizza Serrana",
@@ -14,6 +15,7 @@ let pizzaList = [
         img:"assets/img/pizzas/pizza2.png",
         id:1,
         quantity: 1,
+        price: 9
     
     },
     {
@@ -22,6 +24,7 @@ let pizzaList = [
         img:"assets/img/pizzas/pizza3.png",
         id:2,
         quantity: 1,
+        price: 9
     },
     {
         name:"pizza04",
@@ -29,6 +32,7 @@ let pizzaList = [
         img:"assets/img/pizzas/pizza4.png",
         id:3,
         quantity: 1,
+        price: 9
     }
 ]
 

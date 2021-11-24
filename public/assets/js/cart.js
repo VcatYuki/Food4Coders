@@ -69,13 +69,17 @@ function renderCartItems(){
                         <h4>${item.name}</h4>    
                         <img src="${item.img}">
                     </div>
-                </div>
+                
+                    <div class="unit-price">
+                        <small>€</small>${item.price}
+                    </div>
 
-                <div class="units">
-                        <button class="btn minus" onclick="changeNumberofUnits('minus', ${item.id})"> - </button>
-                        <div class="number">${item.numberOfUnits}</div>
-                        <button class="btn plus" onclick="changeNumberofUnits('plus', ${item.id})"> + </button>
-                </div>  
+                    <div class="units">
+                            <button class="btn minus" onclick="changeNumberofUnits('minus', ${item.id})"> - </button>
+                            <div class="number">${item.numberOfUnits}</div>
+                            <button class="btn plus" onclick="changeNumberofUnits('plus', ${item.id})"> + </button>
+                    </div>  
+                </div>
             `
     });
 }
