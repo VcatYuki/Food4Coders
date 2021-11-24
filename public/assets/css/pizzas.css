@@ -72,10 +72,10 @@
     .info img{
         z-index:-1;
         position:absolute;
-        bottom: -20%;
+        transform:translate(0%,110%);
         left:-6%;
         width: 100%;
-
+        
         border-radius:50%;
         border: 25px white solid;
         outline:30px rgba(255, 255, 255, 0.397) solid;
@@ -113,12 +113,12 @@
         margin: 0%;
     }
     .bottom_box {
-        position: absolute;
+        position: fixed;
         background-color: rgba(238, 238, 238, 0.5);
         width: 100vw;
         height: 60px;
         backdrop-filter: blur(25px);
-        bottom: 0%;
+        bottom: 8%;
     }
     .price {
         position: absolute;
