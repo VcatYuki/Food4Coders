@@ -20,7 +20,7 @@
         display: flex;
         position: absolute;
         top: 3%;
-        left: 45%;
+        left: 40%;
         justify-content: center;
         font-size:37px;
         margin: 10px;
@@ -71,11 +71,11 @@
 @media only screen and (max-width:600px ) {
     .info img{
         z-index:-1;
-        position:absolute;
-        transform:translate(0%,110%);
-        left:-6%;
-        width: 100%;
-        
+        position:fixed;
+        bottom: -20%;
+        left:-2px;
+        width: 90%;
+
         border-radius:50%;
         border: 25px white solid;
         outline:30px rgba(255, 255, 255, 0.397) solid;
@@ -113,7 +113,7 @@
         margin: 0%;
     }
     .bottom_box {
-        position: fixed;
+        position:fixed;
         background-color: rgba(238, 238, 238, 0.5);
         width: 100vw;
         height: 60px;
@@ -121,7 +121,7 @@
         bottom: 8%;
     }
     .price {
-        position: absolute;
+        position: fixed;
         z-index: 1;
         left: 3%;
         bottom: 2.5%;
