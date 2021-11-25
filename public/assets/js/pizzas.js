@@ -27,7 +27,7 @@ let pizzaList = [
         price: 9
     },
     {
-        name:"pizza04",
+        name:"Pizza Vegetariana",
         description:"Pizza de verduras y aceitunas negras",
         img:"assets/img/pizzas/pizza4.png",
         id:3,
@@ -49,8 +49,8 @@ let indexPizza = 0;
 function showMenu() {         
         plates = 
         `<div class="pizza" data-number="${pizzaList[indexPizza].id}">    
+            <h4>${pizzaList[indexPizza].name}</h4>
             <div class="info">            
-                <h4>${pizzaList[indexPizza].name}</h4>
                 <div class="infodesc">
                     <h5>INFORMATION</H5>
                     <p class="description">${pizzaList[indexPizza].description}</p>
