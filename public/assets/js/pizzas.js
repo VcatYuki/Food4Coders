@@ -55,9 +55,7 @@ function showMenu() {
                 <p class="price"></p>
                 
                 <div class="boxPizzas">
-                    <img class="pleft" src="${pizzaList[indexPizza].img}">            
-                    <img class="pcenter" src="${pizzaList[indexPizza].img}">
-                    <img class="pright" src="${pizzaList[indexPizza+1].img}">
+                    
                 </div>
             </div>
         </div>`
@@ -81,6 +79,7 @@ function subtractPizza() {
         } 
         console.log(indexPizza)                  
         showMenu();
+        showPizzas()
         updateDisplay();
         document.querySelector(".price").innerHTML = sizeList.small + " €/pizza";
     }
@@ -92,34 +91,48 @@ function sumPizza() {
         }        
         console.log(indexPizza)        
         showMenu();
+        showPizzas()
         updateDisplay();
         document.querySelector(".price").innerHTML = sizeList.small + " €/pizza";
     }
 
+
+    let imgPizzas = ""
+    function showPizzas () {
+        imgPizzas= ` <img class="pleft" src="${pizzaList[indexPizza+3].img}" >            
+                    <img class="pcenter" src="${pizzaList[indexPizza].img}">
+                    <img class="pright" src="${pizzaList[indexPizza+1].img}">`
+                    document.querySelector('.boxPizzas').innerHTML = imgPizzas;
+    }
+    showPizzas();
+    
+
+
 /* Lista de precios por tamaño y como insertarlo en el HTML con los botones*/
 
 
+let globalSize = sizeList.small+ " €/pizza";
+document.querySelector(".price").innerHTML = globalSize;
 
 let small = document.querySelector(".small") 
 small.addEventListener('click', function (){
-   document.querySelector(".price").innerHTML = sizeList.small+ " €/pizza";
+    globalSize = sizeList.small+ " €/pizza";
+   document.querySelector(".price").innerHTML = globalSize;
+   
 })
 
 let medium =  document.querySelector(".medium")   
 medium.addEventListener('click', function (){
-    document.querySelector(".price").innerHTML = sizeList.medium + " €/pizza";
+    globalSize = sizeList.medium+ " €/pizza";
+    document.querySelector(".price").innerHTML = globalSize;
 }) 
 
 let large = document.querySelector(".large")
 large.addEventListener('click', function (){
-    document.querySelector(".price").innerHTML = sizeList.large + " €/pizza";
+    globalSize = sizeList.large+ " €/pizza";
+    document.querySelector(".price").innerHTML = globalSize;
+    
 }) 
-
-window.onload = function (){
-    document.querySelector(".price").innerHTML = sizeList.small+ " €/pizza";    
-    document.querySelector('.counter-display').innerHTML = 1;
- };
-
 function sendCart() {
     showCart();
 

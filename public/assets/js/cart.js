@@ -41,10 +41,9 @@ function addToCart(id) {
          /* name: item.name,
             description: item.descriptio,
             img: item.img,
-            id:item.id,
-            quantity:1, */
+            id:item.id, */
             numberOfUnits:count,
-            size:`M`
+            size:globalSize,
         });
     }
     
@@ -69,12 +68,10 @@ function renderCartItems(){
                     <div class="item-info">
                         <h4>${item.name}</h4>    
                         <img src="${item.img}">
-                    </div>
-                
+                    </div>                
                     <div class="unit-price">
-                        <small>€</small>${item.price}
+                        <small>${item.size}</small>
                     </div>
-
                     <div class="units">
                             <button class="btn minus" onclick="changeNumberofUnits('minus', ${item.id})"> - </button>
                             <div class="number">${item.numberOfUnits}</div>
