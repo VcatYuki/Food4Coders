@@ -1,8 +1,9 @@
+
 /* Tablet Version */
 @media only screen and (min-width:601px) {
     .boxPizzas {
         overflow: hidden;
-        height: 50%;
+        height: 54vh;
         position: relative;
     }   
     
@@ -10,7 +11,6 @@
     .pright,
     .pcenter {
         z-index:-1;          
-        width: 50%;
         border-radius:50%;
         border: 25px white solid;
         outline:30px rgba(255, 255, 255, 0.397) solid;
@@ -19,17 +19,24 @@
     .pleft {
         position: absolute;      
         bottom: -39%;
-        left:-28%;
+        left:-20%;
+
+        width:35%;
     }
     .pcenter {
         position: sticky;
         bottom: -10%;
         left: 25.5%;
+
+        width: 50%;
     }
+
+
     .pright {
         position: absolute;
         bottom: -39%;
-        right: -28%;
+        right: -20%;
+        width:35%;
     }
 
 
@@ -44,7 +51,7 @@
         display: flex;
         position: absolute;
         top: 3%;
-        left: 40%;
+        left: 38.2%;
         justify-content: center;
         font-size: 37px;
         margin: 10px;
@@ -149,12 +156,12 @@
         margin: 0%;
     }
     .bottom_box {
-        position:fixed;
+        position:absolute;
         background-color: rgba(238, 238, 238, 0.5);
         width: 100vw;
         height: 60px;
         backdrop-filter: blur(25px);
-        bottom: 8%;
+        bottom: 0;
     }
     .price {
         position: fixed;

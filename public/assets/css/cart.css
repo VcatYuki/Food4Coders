@@ -140,6 +140,11 @@
         justify-content: center;
     }
 
+    .cart-item h4{
+        font-size:22px;
+        position:relative;
+    }
+
     .units{
         gap: 11px;
         font-size: 22px;
