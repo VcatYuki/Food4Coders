@@ -6,7 +6,6 @@ let pizzaList = [
         description:"Pizza con champiñones, frankfurt, aceitunas negras y pimiento verde y rojo",
         img:"assets/img/pizzas/pizza1.png",
         id:0,
-        quantity: 1,
         price: 9
     },
     {
@@ -14,7 +13,6 @@ let pizzaList = [
         description:"Pizza con jamón serrano y queso",
         img:"assets/img/pizzas/pizza2.png",
         id:1,
-        quantity: 1,
         price: 9
     
     },
@@ -23,7 +21,6 @@ let pizzaList = [
         description:"Pizza de tomate, mozzarella y albahaca",
         img:"assets/img/pizzas/pizza3.png",
         id:2,
-        quantity: 1,
         price: 9
     },
     {
@@ -31,7 +28,6 @@ let pizzaList = [
         description:"Pizza de verduras y aceitunas negras",
         img:"assets/img/pizzas/pizza4.png",
         id:3,
-        quantity: 1,
         price: 9
     }
 ]
@@ -57,15 +53,10 @@ function showMenu() {
                 </div>
                 <h3>PRICE</h3>
                 <p class="price"></p>
-                <div class="serving">
-                    <h5>SERVING</h5>
-                    <div class="bserving">
-                        <button class="counter-minus">-</button>
-                        <div class="counter-display">${pizzaList[indexPizza].quantity}</div>
-                        <button class="counter-plus">+</button>
-                    </div>
-                </div>            
-                <img src="${pizzaList[indexPizza].img}">
+                
+                <div class="boxPizzas">
+                    
+                </div>
             </div>
         </div>`
         
@@ -88,6 +79,7 @@ function subtractPizza() {
         } 
         console.log(indexPizza)                  
         showMenu();
+        showPizzas()
         updateDisplay();
         document.querySelector(".price").innerHTML = sizeList.small + " €/pizza";
     }
@@ -99,33 +91,48 @@ function sumPizza() {
         }        
         console.log(indexPizza)        
         showMenu();
+        showPizzas()
         updateDisplay();
         document.querySelector(".price").innerHTML = sizeList.small + " €/pizza";
     }
 
+
+    let imgPizzas = ""
+    function showPizzas () {
+        imgPizzas= ` <img class="pleft" src="${pizzaList[indexPizza+3].img}" >            
+                    <img class="pcenter" src="${pizzaList[indexPizza].img}">
+                    <img class="pright" src="${pizzaList[indexPizza+1].img}">`
+                    document.querySelector('.boxPizzas').innerHTML = imgPizzas;
+    }
+    showPizzas();
+    
+
+
 /* Lista de precios por tamaño y como insertarlo en el HTML con los botones*/
 
 
+let globalSize = sizeList.small+ " €/pizza";
+document.querySelector(".price").innerHTML = globalSize;
 
 let small = document.querySelector(".small") 
 small.addEventListener('click', function (){
-   document.querySelector(".price").innerHTML = sizeList.small+ " €/pizza";
+    globalSize = sizeList.small+ " €/pizza";
+   document.querySelector(".price").innerHTML = globalSize;
+   
 })
 
 let medium =  document.querySelector(".medium")   
 medium.addEventListener('click', function (){
-    document.querySelector(".price").innerHTML = sizeList.medium + " €/pizza";
+    globalSize = sizeList.medium+ " €/pizza";
+    document.querySelector(".price").innerHTML = globalSize;
 }) 
 
 let large = document.querySelector(".large")
 large.addEventListener('click', function (){
-    document.querySelector(".price").innerHTML = sizeList.large + " €/pizza";
+    globalSize = sizeList.large+ " €/pizza";
+    document.querySelector(".price").innerHTML = globalSize;
+    
 }) 
-
-window.onload = function (){
-    document.querySelector(".price").innerHTML = sizeList.small+ " €/pizza";
- };
-
 function sendCart() {
     showCart();
 

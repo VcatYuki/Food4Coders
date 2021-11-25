@@ -34,16 +34,16 @@ function addToCart(id) {
     }
     else {
       //const item = pizzaList.find((pizzaList) => pizzaList.id === id)
+      /* Acdeder a quantity de item y cambiar su valor por el de cout (del contador de la main page) */
         const item = getItem(id, pizzaList);
         cart.push({
             ...item,
-         /*    name: item.name,
+         /* name: item.name,
             description: item.descriptio,
             img: item.img,
-            id:item.id,
-            quantity:1, */
-            numberOfUnits:1,
-            size:`M`
+            id:item.id, */
+            numberOfUnits:count,
+            size:globalSize,
         });
     }
     
@@ -68,12 +68,10 @@ function renderCartItems(){
                     <div class="item-info">
                         <h4>${item.name}</h4>    
                         <img src="${item.img}">
-                    </div>
-                
+                    </div>                
                     <div class="unit-price">
-                        <small>€</small>${item.price}
+                        <small>${item.size}</small>
                     </div>
-
                     <div class="units">
                             <button class="btn minus" onclick="changeNumberofUnits('minus', ${item.id})"> - </button>
                             <div class="number">${item.numberOfUnits}</div>
