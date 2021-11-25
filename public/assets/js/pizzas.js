@@ -99,9 +99,9 @@ function sumPizza() {
 
     let imgPizzas = ""
     function showPizzas () {
-        imgPizzas= ` <img class="pleft" src="${pizzaList[indexPizza+3].img}" >            
+        imgPizzas= ` <img class="pleft" src="${pizzaList[indexPizza].img}" >            
                     <img class="pcenter" src="${pizzaList[indexPizza].img}">
-                    <img class="pright" src="${pizzaList[indexPizza+1].img}">`
+                    <img class="pright" src="${pizzaList[indexPizza].img}">`
                     document.querySelector('.boxPizzas').innerHTML = imgPizzas;
     }
     showPizzas();
