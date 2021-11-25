@@ -131,6 +131,7 @@
 
     .cart-item h4{
         font-size:22px;
+        position:relative;
     }
 
     .units{
