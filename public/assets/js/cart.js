@@ -17,35 +17,63 @@ let cart = [];
 
 function getItem(id, list){
   let item =  list.find((e)=>e.id === id);
-  console.log(item)
   return item 
 }
 
+
+
 //Add to Cart fuction
-function addToCart(id) {
+//function addToCart(id) {
     //let valido = (e)=>{e.id === id}
     //check if product already exists in the cart
-    if (cart.some((e)=> e.id === id)){
+    //if (cart.some((e)=> e.id === id)){
         //alert("Pizza already in the box");
 
         //clicking 'add to box' will do the same as clicking on the plus button inside the cart
-        changeNumberofUnits("plus", id) 
+        //changeNumberofUnits("plus", id) 
 
-    }
-    else {
+   // }
+    //else {
       //const item = pizzaList.find((pizzaList) => pizzaList.id === id)
       /* Acdeder a quantity de item y cambiar su valor por el de cout (del contador de la main page) */
-        const item = getItem(id, pizzaList);
-        cart.push({
-            ...item,
+      //  const item = getItem(id, pizzaList);
+        //cart.push({
+          //  ...item,
          /* name: item.name,
             description: item.descriptio,
             img: item.img,
             id:item.id, */
-            numberOfUnits:count,
-            size:globalSize,
-        });
+            //numberOfUnits:count,
+            //size:globalSize,
+        //});
+    //}
+    
+    //console.log(cart);
+
+    //updateCart();
+//}
+
+
+
+//Add to Cart fuction
+
+
+
+function addToCart(id) {
+    if (cart.some((e)=> e.id === id)){
+        changeNumberofUnits("plus", id) 
     }
+    else {
+        const item = getItem(id, pizzaList);
+        let pizzaToAdd = {
+            ...item,
+            numberOfUnits:count,
+            size:globalSize
+        };
+    cart.push(pizzaToAdd);
+    localStorage.setItem('cart', JSON.stringify(cart))
+    }
+    
     
     console.log(cart);
 
@@ -61,8 +89,9 @@ function updateCart(){
 
 //Show/render Cart Items
 function renderCartItems(){
+    let pizzaCart = JSON.parse(localStorage.getItem("cart"))
     cartItems.innerHTML = ""; // clear cart item to not repeat
-    cart.forEach((item)=> {
+    pizzaCart.forEach((item)=> {
             cartItems.innerHTML += `
                 <div class="cart-item">
                     <div class="item-info">
