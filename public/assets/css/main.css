@@ -8,7 +8,7 @@ body{
     background-image: url('../img/backgrounds/ipad-background.png');
     background-color: #F1EEEE;
     background-repeat: no-repeat;
-    max-height: 90vh;
+    max-height: 100vh;
 }
 
 button {
