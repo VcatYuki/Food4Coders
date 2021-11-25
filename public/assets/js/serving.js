@@ -35,26 +35,27 @@ function updateDisplay() {
 
 /*
 updateDisplay();
+
 counterPlusEle.addEventListener("click", () => {
     count++;
     updateDisplay();   
 });
+
 counterMinEle.addEventListener("click", () => {
     count--;
     updateDisplay();   
-    
+        
     if (count === 0) {
         count = 1;
         updateDisplay();
     }
-});*/
+});
 
-/* document.querySelectorAll('.counter-plus').forEach(item => {
-    item.addEventListener('click', () => {
-        count++;
-        updateDisplay();   
-    })
-})   */  
+
+function updateDisplay() {
+    counterDispEle.innerHTML = count;
+};
+ 
 
 /* 
 function changePricePlus() {

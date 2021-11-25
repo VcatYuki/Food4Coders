@@ -26,11 +26,15 @@ function addToCart(id) {
     //let valido = (e)=>{e.id === id}
     //check if product already exists in the cart
     if (cart.some((e)=> e.id === id)){
-        alert("Pizza already in the box");
-       
+        //alert("Pizza already in the box");
+
+        //clicking 'add to box' will do the same as clicking on the plus button inside the cart
+        changeNumberofUnits("plus", id) 
+
     }
     else {
       //const item = pizzaList.find((pizzaList) => pizzaList.id === id)
+      /* Acdeder a quantity de item y cambiar su valor por el de cout (del contador de la main page) */
         const item = getItem(id, pizzaList);
         cart.push({
             ...item,
@@ -39,7 +43,7 @@ function addToCart(id) {
             img: item.img,
             id:item.id,
             quantity:1, */
-            numberOfUnits:1,
+            numberOfUnits:count,
             size:`M`
         });
     }
@@ -66,20 +70,22 @@ function renderCartItems(){
                         <h4>${item.name}</h4>    
                         <img src="${item.img}">
                     </div>
-                </div>
+                
+                    <div class="unit-price">
+                        <small>€</small>${item.price}
+                    </div>
 
-                <div class="cart-counter">
-                        <button class="btn minus" onclick="changeNumberofUnits('minus', ${item.id})> - </button>
-                        <div class="number">${item.numberOfUnits}</div>
-                        <button class="btn plus" onclick="changeNumberofUnits('plus', ${item.id})> + </button>
-                </div>  
+                    <div class="units">
+                            <button class="btn minus" onclick="changeNumberofUnits('minus', ${item.id})"> - </button>
+                            <div class="number">${item.numberOfUnits}</div>
+                            <button class="btn plus" onclick="changeNumberofUnits('plus', ${item.id})"> + </button>
+                    </div>  
+                </div>
             `
     });
 }
 
-//quantity buttons or 'onclick' is not working!!! need to fix that 
-
-//Change number of units 
+//Change number of units inside the cart
 
 function changeNumberofUnits (action, id) {
     cart = cart.map((item) => {

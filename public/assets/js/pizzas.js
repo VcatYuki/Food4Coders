@@ -6,14 +6,14 @@ let pizzaList = [
         description:"Pizza con champiñones, frankfurt, aceitunas negras y pimiento verde y rojo",
         img:"assets/img/pizzas/pizza1.png",
         id:0,
-        quantity: 1,
+        price: 9
     },
     {
         name:"Pizza Serrana",
         description:"Pizza con jamón serrano y queso",
         img:"assets/img/pizzas/pizza2.png",
         id:1,
-        quantity: 1,
+        price: 9
     
     },
     {
@@ -21,14 +21,14 @@ let pizzaList = [
         description:"Pizza de tomate, mozzarella y albahaca",
         img:"assets/img/pizzas/pizza3.png",
         id:2,
-        quantity: 1,
+        price: 9
     },
     {
         name:"pizza04",
         description:"Pizza de verduras y aceitunas negras",
         img:"assets/img/pizzas/pizza4.png",
         id:3,
-        quantity: 1,
+        price: 9
     }
 ]
 
@@ -53,17 +53,7 @@ function showMenu() {
                 </div>
                 <h3>PRICE</h3>
                 <p class="price"></p>
-                <div class="serving">
-                    <h5>SERVING</h5>
-                    
-                    <div class="bserving">
-                        <button class="counter-minus">-</button>
-                        <div class="counter-display">${pizzaList[indexPizza].quantity}</div>
-                        <button class="counter-plus">+</button>
-                    </div>
-
-                      
-                </div>
+                
                 <div class="boxPizzas">
                     <img class="pleft" src="${pizzaList[indexPizza].img}">            
                     <img class="pcenter" src="${pizzaList[indexPizza].img}">
@@ -126,7 +116,8 @@ large.addEventListener('click', function (){
 }) 
 
 window.onload = function (){
-    document.querySelector(".price").innerHTML = sizeList.small+ " €/pizza";
+    document.querySelector(".price").innerHTML = sizeList.small+ " €/pizza";    
+    document.querySelector('.counter-display').innerHTML = 1;
  };
 
 function sendCart() {
