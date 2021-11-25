@@ -6,14 +6,14 @@ let pizzaList = [
         description:"Pizza con champiñones, frankfurt, aceitunas negras y pimiento verde y rojo",
         img:"assets/img/pizzas/pizza1.png",
         id:0,
-        price: 9.00 //just to test the cart renderSubTotal function
+        price: 8.00 //just to test the cart renderSubTotal function
     },
     {
         name:"Pizza Serrana",
         description:"Pizza con jamón serrano y queso",
         img:"assets/img/pizzas/pizza2.png",
         id:1,
-        price: 9.00
+        price: 8.00
     
     },
     {
@@ -21,14 +21,14 @@ let pizzaList = [
         description:"Pizza de tomate, mozzarella y albahaca",
         img:"assets/img/pizzas/pizza3.png",
         id:2,
-        price: 9.00
+        price: 8.00
     },
     {
         name:"Pizza Vegetariana",
         description:"Pizza de verduras y aceitunas negras",
         img:"assets/img/pizzas/pizza4.png",
         id:3,
-        price: 9.00
+        price: 8.00
     }
 ]
 
@@ -131,7 +131,7 @@ document.querySelector(".price").innerHTML = globalSize;
 
 let small = document.querySelector(".small") 
 small.addEventListener('click', function (){
-    globalSize = sizeList.small+ " €/";
+    globalSize = sizeList.small+ " €";
    document.querySelector(".price").innerHTML = globalSize;
    /* sizeS() */
    img.style.transform = 'scale(0.9)'

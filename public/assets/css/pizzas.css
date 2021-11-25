@@ -35,7 +35,7 @@
     .pcenter {
         position: absolute;
         bottom: -45%;
-        left: 25.5%;
+        left: 23.5%;
         width: 50%;
     }
 
@@ -88,7 +88,7 @@
     h3 {
         position:absolute;
         right:18%;
-        top:21.2%;
+        top:20.8%;
         visibility: visible;
         font-size:20px;
         color:rgb(177, 177, 177);
@@ -96,7 +96,7 @@
     }
     .price {
         position: absolute;
-        right:15.2%;
+        right:20%;
         top:26.2%;
         display: flex;
         justify-content: center;

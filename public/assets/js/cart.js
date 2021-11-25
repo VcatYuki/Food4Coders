@@ -1,3 +1,10 @@
+// -> Problems: <- 
+//1. Display of units is not working anymore in the cart
+//2. The price that goes on subtotal is 'staticly' set on the pizzaList array and not related with sizes
+//3. We don't have animations for pizza rotation
+//4. It's showing the same pizza in all 3 positions (ipad mode)
+//5. localStorage is not working -> when you refresh the page the cart is gone
+
 //Show the cart - onclick
 let buttonCart = document.querySelector(".button-cart");
 let showCart = document.querySelector(".cart");
@@ -21,13 +28,14 @@ function getItem(id, list){
 }
 
 //Add to Cart fuction
+
 function addToCart(id) {
     if (cart.some((e)=> e.id === id)){
         changeNumberofUnits("plus", id) 
     }
     else {
         const item = getItem(id, pizzaList);
-        let pizzaToAdd = {
+        var pizzaToAdd = {
             ...item,
             numberOfUnits:count,
             size:globalSize
@@ -50,6 +58,7 @@ function updateCart(){
 }
 
 //Calculate and render subtotal
+
 function renderSubtotal(){
     let totalPrice= 0, totalItems = 0;
 
@@ -66,13 +75,14 @@ function renderSubtotal(){
 }   
 
 //Show/render Cart Items
+
 function renderCartItems(){
     let pizzaCart = JSON.parse(localStorage.getItem("cart"))
     cartItems.innerHTML = ""; // clear cart item to not repeat
     pizzaCart.forEach((item)=> {
             cartItems.innerHTML += `
                 <div class="cart-item">
-                    <div class="item-info" >
+                    <div class="item-info onclick="removeItemFromCart(${item.id})">
                         <h4>${item.name}</h4>    
                         <img src="${item.img}">
                     </div>                

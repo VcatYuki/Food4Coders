@@ -50,6 +50,12 @@
     justify-content: center;
     align-items: center;
 
+    transition: ease-in-out 0.5s;
+}
+
+.item-info:hover{
+    background-color: #fe34346b;
+    border-radius: 25px;
 }
 
 .item-info h4{
