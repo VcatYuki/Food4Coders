@@ -95,7 +95,11 @@
 /*Mobile Version*/
 @media only screen and (max-width:600px ) {
     
-    
+    .boxPizzas {
+        overflow: hidden;
+        height: 50%;
+        position: relative;
+    }   
     .pleft,
     .pright {
         visibility: hidden;

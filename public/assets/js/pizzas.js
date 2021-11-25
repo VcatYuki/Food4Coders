@@ -110,6 +110,19 @@ function sumPizza() {
 
 /* Lista de precios por tamaño y como insertarlo en el HTML con los botones*/
 
+let img = document.querySelector(".pcenter")
+function sizeS(){
+    img.style.transform = 'scale(0.9)'
+}
+function sizeM(){
+    img.style.transform = 'scale(1)'
+}
+function sizeL(){
+    img.style.transform = 'scale(1.2)'
+}
+sizeS();
+
+
 
 let globalSize = sizeList.small+ " €/pizza";
 document.querySelector(".price").innerHTML = globalSize;
@@ -118,20 +131,21 @@ let small = document.querySelector(".small")
 small.addEventListener('click', function (){
     globalSize = sizeList.small+ " €/pizza";
    document.querySelector(".price").innerHTML = globalSize;
-   
+   sizeS();
 })
 
 let medium =  document.querySelector(".medium")   
 medium.addEventListener('click', function (){
     globalSize = sizeList.medium+ " €/pizza";
     document.querySelector(".price").innerHTML = globalSize;
+    sizeM();
 }) 
 
 let large = document.querySelector(".large")
 large.addEventListener('click', function (){
     globalSize = sizeList.large+ " €/pizza";
-    document.querySelector(".price").innerHTML = globalSize;
-    
+    document.querySelector(".price").innerHTML = globalSize;  
+    sizeL();  
 }) 
 function sendCart() {
     showCart();
