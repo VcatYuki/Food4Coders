@@ -1,6 +1,7 @@
 //Show the cart - onclick
 let buttonCart = document.querySelector(".button-cart");
 let showCart = document.querySelector(".cart");
+let subTotal = document.querySelector(".subtotal");
  
 function showCarrito(){
     showCart.classList.toggle("active");
@@ -15,6 +16,7 @@ const cartItems = document.querySelector(".cart-items");
 //Empty Cart array
 let cart = [];
 
+//Access to the desired pizza
 function getItem(id, list){
   let item =  list.find((e)=>e.id === id);
   console.log(item)
@@ -23,14 +25,10 @@ function getItem(id, list){
 
 //Add to Cart fuction
 function addToCart(id) {
-    //let valido = (e)=>{e.id === id}
     //check if product already exists in the cart
     if (cart.some((e)=> e.id === id)){
-        //alert("Pizza already in the box");
-
-        //clicking 'add to box' will do the same as clicking on the plus button inside the cart
+        //adds to cart depending on how many times you press 'add to box', and shows in numberofunits
         changeNumberofUnits("plus", id) 
-
     }
     else {
       //const item = pizzaList.find((pizzaList) => pizzaList.id === id)
@@ -56,8 +54,24 @@ function addToCart(id) {
 
 function updateCart(){
     renderCartItems();
-    //renderSubtotal();
+    renderSubtotal();
 }
+
+//Calculate and render subtotal
+function renderSubtotal(){
+    let totalPrice= 0, totalItems = 0;
+
+    cart.forEach((item) => {
+        totalPrice += item.price * item.numberOfUnits; //price error <- 
+        totalItems += item.numberOfUnits;
+    });
+
+    let devileryCost = 2.00;
+
+    let total = devileryCost + totalPrice;
+
+    subTotal.innerHTML = `Subtotal (${totalItems}) items: ${totalPrice}€ <p>Delivery cost: 2.00 €</p> Total: ${total} €`; //price error <-
+}   
 
 //Show/render Cart Items
 function renderCartItems(){
@@ -65,7 +79,7 @@ function renderCartItems(){
     cart.forEach((item)=> {
             cartItems.innerHTML += `
                 <div class="cart-item">
-                    <div class="item-info">
+                    <div class="item-info" >
                         <h4>${item.name}</h4>    
                         <img src="${item.img}">
                     </div>                
@@ -81,6 +95,15 @@ function renderCartItems(){
             `
     });
 }
+
+//Remove cart items
+
+function removeItemFromCart (id){
+    cart = cart.filter((item) => item.id !== id);
+
+    updateCart();
+}
+
 
 //Change number of units inside the cart
 
@@ -105,3 +128,4 @@ function changeNumberofUnits (action, id) {
 
     updateCart();
 }
+
