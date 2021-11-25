@@ -11,39 +11,31 @@ buttonCart.addEventListener('click', showCarrito);
 //Selecting the shopping cart from HTML
 const cartItems = document.querySelector(".cart-items");
 
-// -> continue here!!!
-
 //Empty Cart array
 let cart = [];
 
 //Access to the desired pizza
 function getItem(id, list){
   let item =  list.find((e)=>e.id === id);
-  console.log(item)
   return item 
 }
 
 //Add to Cart fuction
 function addToCart(id) {
-    //check if product already exists in the cart
     if (cart.some((e)=> e.id === id)){
-        //adds to cart depending on how many times you press 'add to box', and shows in numberofunits
         changeNumberofUnits("plus", id) 
     }
     else {
-      //const item = pizzaList.find((pizzaList) => pizzaList.id === id)
-      /* Acdeder a quantity de item y cambiar su valor por el de cout (del contador de la main page) */
         const item = getItem(id, pizzaList);
-        cart.push({
+        let pizzaToAdd = {
             ...item,
-         /* name: item.name,
-            description: item.descriptio,
-            img: item.img,
-            id:item.id, */
             numberOfUnits:count,
-            size:globalSize,
-        });
+            size:globalSize
+        };
+    cart.push(pizzaToAdd);
+    localStorage.setItem('cart', JSON.stringify(cart))
     }
+    
     
     console.log(cart);
 
@@ -75,8 +67,9 @@ function renderSubtotal(){
 
 //Show/render Cart Items
 function renderCartItems(){
+    let pizzaCart = JSON.parse(localStorage.getItem("cart"))
     cartItems.innerHTML = ""; // clear cart item to not repeat
-    cart.forEach((item)=> {
+    pizzaCart.forEach((item)=> {
             cartItems.innerHTML += `
                 <div class="cart-item">
                     <div class="item-info" >
@@ -96,7 +89,7 @@ function renderCartItems(){
     });
 }
 
-//Remove cart items
+//Remove items from cart
 
 function removeItemFromCart (id){
     cart = cart.filter((item) => item.id !== id);
@@ -128,4 +121,35 @@ function changeNumberofUnits (action, id) {
 
     updateCart();
 }
+
+
+//Add to Cart fuction w/ coments to understand better
+/* function addToCart(id) {
+    //check if product already exists in the cart
+    if (cart.some((e)=> e.id === id)){
+        alert("Pizza already in the box");
+
+        //clicking 'add to box' will do the same as clicking on the plus button inside the cart
+        changeNumberofUnits("plus", id) 
+
+    }
+    else {
+      const item = pizzaList.find((pizzaList) => pizzaList.id === id)
+      /* Acdeder a quantity de item y cambiar su valor por el de cout (del contador de la main page) */
+        /* const item = getItem(id, pizzaList);
+        cart.push({
+            ...item,
+         /* name: item.name,
+            description: item.descriptio,
+            img: item.img,
+            id:item.id, */
+            //numberOfUnits:count,
+            //size:globalSize,
+        /* });
+    }
+    
+    console.log(cart);
+
+    updateCart();
+} */ 
 

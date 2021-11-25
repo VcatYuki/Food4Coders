@@ -110,6 +110,8 @@ function sumPizza() {
 
 /* Lista de precios por tamaño y como insertarlo en el HTML con los botones*/
 
+/* 
+let selectedSize = "";
 let img = document.querySelector(".pcenter")
 function sizeS(){
     img.style.transform = 'scale(0.9)'
@@ -120,10 +122,10 @@ function sizeM(){
 function sizeL(){
     img.style.transform = 'scale(1.2)'
 }
-sizeS();
+ */
 
 
-
+let img = document.querySelector(".pcenter")
 let globalSize = sizeList.small+ " €";
 document.querySelector(".price").innerHTML = globalSize;
 
@@ -131,21 +133,24 @@ let small = document.querySelector(".small")
 small.addEventListener('click', function (){
     globalSize = sizeList.small+ " €/";
    document.querySelector(".price").innerHTML = globalSize;
-   sizeS();
+   /* sizeS() */
+   img.style.transform = 'scale(0.9)'
 })
 
 let medium =  document.querySelector(".medium")   
 medium.addEventListener('click', function (){
     globalSize = sizeList.medium+ " €";
     document.querySelector(".price").innerHTML = globalSize;
-    sizeM();
+    /* sizeM() */
+    img.style.transform = 'scale(1)'
 }) 
 
 let large = document.querySelector(".large")
 large.addEventListener('click', function (){
     globalSize = sizeList.large+ " €";
-    document.querySelector(".price").innerHTML = globalSize;  
-    sizeL();  
+    document.querySelector(".price").innerHTML = globalSize; 
+    /* sizeL()  */
+    img.style.transform = 'scale(1.2)'
 }) 
 function sendCart() {
     showCart();
