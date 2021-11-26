@@ -1,9 +1,8 @@
 // -> Problems: <- 
-//1. Display of units is not working anymore in the cart
-//2. The price that goes on subtotal is 'staticly' set on the pizzaList array and not related with sizes
-//3. We don't have animations for pizza rotation
-//4. It's showing the same pizza in all 3 positions (ipad mode)
-//5. localStorage is not working -> when you refresh the page the cart is gone
+//1. The price that goes on subtotal is 'staticly' set on the pizzaList array and not related with sizes
+//2. We don't have animations for pizza rotation
+//3. It's showing the same pizza in all 3 positions (ipad mode)
+
 
 //Show the cart - onclick
 let buttonCart = document.querySelector(".button-cart");
