@@ -66,7 +66,7 @@ function renderSubtotal(){
     let totalPrice= 0, totalItems = 0;
 
     cart.forEach((item) => {
-        totalPrice += item.price * item.numberOfUnits; //price error <- 
+        totalPrice += parseInt(item.size) * item.numberOfUnits; //price error <- 
         totalItems += item.numberOfUnits;
     });
 
@@ -90,7 +90,7 @@ function renderCartItems(){
                         <img src="${item.img}">
                     </div>                
                     <div class="unit-price">
-                        <small>${item.size}</small>
+                        <small>${item.size}/pizza</small>
                     </div>
                     <div class="units">
                             <button class="btn minus" onclick="changeNumberofUnits('minus', ${item.id})"> - </button>
