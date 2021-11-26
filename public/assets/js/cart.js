@@ -19,7 +19,7 @@ buttonCart.addEventListener('click', showCarrito);
 const cartItems = document.querySelector(".cart-items");
 
 //Empty Cart array
-let cart = JSON.parse(localStorage.getItem("CART"));
+let cart = JSON.parse(localStorage.getItem("CART")) || []; //or empty array
 updateCart();
 
 //Access to the desired pizza
@@ -32,10 +32,11 @@ function getItem(id, list){
 
 function addToCart(id) {
     if (cart.some((e)=> e.id === id)){
-        changeNumberofUnits("plus", id) 
+        changeNumberofUnits("plus", id); 
     }
     else {
         const item = getItem(id, pizzaList);
+
         cart.push({
             ...item,
             numberOfUnits:count,
@@ -45,9 +46,7 @@ function addToCart(id) {
     //localStorage.setItem('cart', JSON.stringify(cart));
     }
     
-    
     console.log(cart);
-
     updateCart();
 }
 
@@ -67,7 +66,7 @@ function renderSubtotal(){
     let totalPrice= 0, totalItems = 0;
 
     cart.forEach((item) => {
-        totalPrice += item.globalSize * item.numberOfUnits; //price error <- 
+        totalPrice += item.price * item.numberOfUnits; //price error <- 
         totalItems += item.numberOfUnits;
     });
 
