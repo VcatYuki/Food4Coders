@@ -64,6 +64,7 @@ function showMenu() {
 }
 showMenu();
 
+
 //->Create and add a funcion updateEventListeners//
 
 
@@ -156,3 +157,4 @@ function sendCart() {
     showCart();
 
  }
+
