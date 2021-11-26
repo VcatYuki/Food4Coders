@@ -90,7 +90,7 @@ function renderCartItems(){
                         <img src="${item.img}">
                     </div>                
                     <div class="unit-price">
-                        <small>${item.size}/pizza</small>
+                        <small>${item.size}</small>
                     </div>
                     <div class="units">
                             <button class="btn minus" onclick="changeNumberofUnits('minus', ${item.id})"> - </button>

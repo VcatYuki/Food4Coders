@@ -78,7 +78,7 @@ function subtractPizza() {
         showMenu();
         showPizzas()
         updateDisplay();
-        document.querySelector(".price").innerHTML = sizeList.small + " €/pizza";
+        document.querySelector(".price").innerHTML = sizeList.small + " €";
     }
 
 function sumPizza() {
@@ -90,7 +90,7 @@ function sumPizza() {
         showMenu();
         showPizzas()
         updateDisplay();
-        document.querySelector(".price").innerHTML = sizeList.small + " €/pizza";
+        document.querySelector(".price").innerHTML = sizeList.small + " €";
     }
 
 
@@ -123,12 +123,12 @@ function sizeL(){
 
 
 let img = document.querySelector(".pcenter")
-let globalSize = sizeList.small+ " €/pizza";
+let globalSize = sizeList.small+ " €";
 document.querySelector(".price").innerHTML = globalSize;
 
 let small = document.querySelector(".small") 
 small.addEventListener('click', function (){
-    globalSize = sizeList.small+ " €/pizza";
+    globalSize = sizeList.small+ " €";
    document.querySelector(".price").innerHTML = globalSize;
    /* sizeS() */
    img.style.transform = 'scale(0.9)'
@@ -136,7 +136,7 @@ small.addEventListener('click', function (){
 
 let medium =  document.querySelector(".medium")   
 medium.addEventListener('click', function (){
-    globalSize = sizeList.medium+ " €/pizza";
+    globalSize = sizeList.medium+ " €";
     document.querySelector(".price").innerHTML = globalSize;
     /* sizeM() */
     img.style.transform = 'scale(1)'
@@ -144,7 +144,7 @@ medium.addEventListener('click', function (){
 
 let large = document.querySelector(".large")
 large.addEventListener('click', function (){
-    globalSize = sizeList.large+ " €/pizza";
+    globalSize = sizeList.large+ " €";
     document.querySelector(".price").innerHTML = globalSize; 
     /* sizeL()  */
     img.style.transform = 'scale(1.2)'
